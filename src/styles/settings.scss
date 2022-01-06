@@ -1,0 +1,192 @@
+// variables
+
+// colors
+$main-color-white: #ffffff;
+$main-color-black: #2e1c1c;
+$main-color-light-blue: #4390d8;
+$main-color-blue: #3078bc;
+$main-color-easy-gray: #dde2f3;
+$sub-color-hard-gray: #757b93;
+$sub-color-middle-gray: #9fa6c1;
+
+// gradients
+$left-linear: linear-gradient(
+  90deg,
+  $main-color-light-blue 40.6%,
+  rgba(196, 196, 196, 0) 100%
+);
+$bottom-linear: linear-gradient(
+  180.11deg,
+  rgba(196, 196, 196, 0) 0.1%,
+  $main-color-light-blue 93.67%
+);
+$bottom-linear-full: linear-gradient(
+  180.11deg,
+  rgba(196, 196, 196, 0) 1%,
+  $main-color-light-blue 120%
+);
+$top-linear: linear-gradient(
+  330.77deg,
+  rgba(196, 196, 196, 0) -2.05%,
+  $main-color-light-blue 88.67%
+);
+
+// mixins
+@mixin mobile-h1 {
+  font-family: Micra Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 150%;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+}
+@mixin desktop-h1 {
+  font-family: Micra Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 42px;
+  line-height: 150%;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+}
+
+@mixin mobile-h2 {
+  font-family: Micra Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+}
+@mixin desktop-h2 {
+  font-family: Micra Bold;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 150%;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+}
+
+@mixin mobile-h3 {
+  font-family: Micra;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+}
+@mixin desktop-h3 {
+  ffont-family: Micra;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+}
+
+@mixin article-mobile-block {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.015em;
+}
+@mixin article-desktop-block {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.015em;
+}
+@mixin article-mobile-tip {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 150%;
+  letter-spacing: 0.06em;
+}
+
+@mixin menu-item {
+  font-family: Micra;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+  letter-spacing: 0.015em;
+}
+
+@mixin primary-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 25px;
+  background: $main-color-blue;
+  border-radius: 5px;
+  color: $main-color-white;
+  @include article-mobile-block;
+  @media (min-width: 1024px) {
+    @include article-desktop-block;
+  }
+}
+@mixin light-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 15px;
+  background: $main-color-white;
+  color: $main-color-light-blue;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  @include article-mobile-block;
+  @media (min-width: 1024px) {
+    @include article-desktop-block;
+  }
+}
+@mixin light-button-hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 15px;
+  background: $main-color-blue;
+  color: $main-color-white;
+  border-radius: 5px;
+}
+
+@mixin slider-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 14px 13px;
+  background: transparent;
+  border: 1px solid #4390d8;
+  box-sizing: border-box;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  width: 36px;
+  height: 44px;
+  @media (min-width: 1024px) {
+    width: 63px;
+    height: 76px;
+    &:hover {
+      box-shadow: 0px 2px 8px #9fa6c1;
+      cursor: pointer;
+    }
+  }
+}
+
+//fonts
+@import url(https://allfont.ru/allfont.css?fonts=micra);
+@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap);
+@import url(https://allfont.ru/allfont.css?fonts=micra-bold);
