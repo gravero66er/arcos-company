@@ -52,7 +52,7 @@ const NewsList = ({ posts }) => {
             />
           </svg>
         </div>
-        <p className="article article--big article--half">
+        <p className="article article--half">
           «Аркос» ведет активную деятельность и не остается незамеченным. В
           разделе вы узнаете все свежие новинки, скидки и бонусы, а также важные
           интересные события в жизни компании.

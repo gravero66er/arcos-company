@@ -14,7 +14,7 @@ export default function Home({ data }) {
       <PromoSlider slides={slides} />
       <section className="container">
         <h1 className="title__h1">Холдинг</h1>
-        <p className="article article--long">
+        <p className="article">
           «Аркос» 一 торгово-производственный холдинг федерального уровня,
           оказывающий полный комплекс услуг по изготовлению, продаже, монтажу,
           вводу в эксплуатацию, а также сервисному обслуживанию систем

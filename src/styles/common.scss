@@ -29,6 +29,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding: 0 0 10px;
   @media (min-width: 1024px) {
     padding: 0 0 25px;
   }
@@ -81,7 +82,7 @@
 .article {
   @include article-mobile-block;
   color: $main-color-black;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   &--big {
     padding: 0 0 10px;
   }
