@@ -1,4 +1,6 @@
 .layout {
+  position: relative;
+  overflow: hidden;
   min-width: 375px;
   max-width: 1440px;
   margin: 0 auto;
@@ -30,6 +32,10 @@
   justify-content: flex-start;
   align-items: center;
   padding: 0 0 10px;
+  &--accordion {
+    justify-content: space-between;
+    padding: 0;
+  }
   @media (min-width: 1024px) {
     padding: 0 0 25px;
   }
@@ -62,11 +68,13 @@
 .title__h3 {
   @include mobile-h3;
   color: $main-color-black;
+  padding: 0 0 5px;
   &--white {
     color: $main-color-white;
   }
   @media (min-width: 1024px) {
     @include desktop-h3;
+    padding: 0 0 20px;
   }
 }
 

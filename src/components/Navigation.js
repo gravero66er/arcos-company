@@ -6,6 +6,9 @@ import styled from "styled-components"
 import Navbar from "./navbar"
 
 const Burger = styled.div`
+  position: ${({ open }) => (open ? "fixed" : "static")};
+  right: 20px;
+  top: 31px;
   div {
     background: ${({ open }) => (open ? "#FFFFFF" : "#4390d8")};
     &:nth-child(1) {

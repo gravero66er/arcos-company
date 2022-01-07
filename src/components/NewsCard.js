@@ -3,7 +3,10 @@ import React from "react"
 import { Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 
-export default function NewsCard({ post: {slug, title, description, tag}, thumbImage }) {
+export default function NewsCard({
+  post: { slug, title, description, tag },
+  thumbImage,
+}) {
   return (
     <section className="news__wrapper">
       <Link to={"/" + slug}>

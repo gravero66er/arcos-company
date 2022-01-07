@@ -1,8 +1,10 @@
 import { graphql, Link } from "gatsby"
 import React from "react"
 import Activity from "../components/Activity"
+import History from "../components/History"
 import Layout from "../components/Layout"
 import NewsList from "../components/NewsList"
+import Philosophy from "../components/Philosophy"
 import PromoSlider from "../components/PromoSlider"
 
 export default function Home({ data }) {
@@ -23,6 +25,8 @@ export default function Home({ data }) {
           и строительном.
         </p>
         <Activity />
+        <History />
+        <Philosophy />
       </section>
       <NewsList posts={posts} />
     </Layout>
