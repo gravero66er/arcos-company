@@ -1,0 +1,111 @@
+.news-page {
+  max-width: 800px;
+  margin: 0 auto;
+  &__link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    max-width: 130px;
+    .news-page__arrow {
+      margin: 0 15px 0 0;
+    }
+    .news-page__nav {
+      @include menu-item;
+      color: $main-color-easy-gray;
+      position: relative;
+    }
+  }
+  &__title {
+    padding: 0 0 10px;
+  }
+  &__description {
+    margin-bottom: 10px;
+    max-width: 500px;
+  }
+  &__date {
+    margin-bottom: 10px;
+  }
+  &__img {
+    border-radius: 5px;
+    max-width: 800px;
+    margin-bottom: 20px;
+  }
+  &__body {
+    h1 {
+      @include mobile-h3;
+      margin-bottom: 10px;
+      color: $main-color-black;
+    }
+    h2 {
+      @include mobile-h4;
+      margin-bottom: 5px;
+      color: $main-color-black;
+    }
+    p {
+      @include article-mobile-block;
+      margin-bottom: 10px;
+      color: $main-color-black;
+    }
+    ul {
+      padding-left: 15px;
+      margin-bottom: 10px;
+      p {
+        position: relative;
+        margin: 0;
+        &::before {
+          content: "-";
+          position: absolute;
+          left: -15px;
+          top: 1px;
+        }
+      }
+    }
+  }
+}
+
+// media queries
+
+@media (min-width: 1024px) {
+  .news-page {
+    &__link {
+      margin-bottom: 30px;
+      .news-page__nav {
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -2;
+          left: 50%;
+          display: block;
+          background: none repeat scroll 0 0 transparent;
+          height: 1px;
+          width: 0;
+          background: $main-color-easy-gray;
+          transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        }
+      }
+      &:hover {
+        .news-page__nav::after {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+    &__body {
+      h1 {
+        @include desktop-h3;
+        margin: 30px 0 20px;
+      }
+      h2 {
+        @include desktop-h4;
+        margin-bottom: 15px;
+      }
+      h2:not(:first-child) {
+        margin-top: 25px;
+      }
+      p {
+        @include article-desktop-block;
+      }
+    }
+  }
+}

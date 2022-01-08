@@ -34,7 +34,7 @@ const NewsList = ({ posts }) => {
     ],
   }
   return (
-    <section className="news">
+    <section className="news" id="news">
       <div className="container">
         <div className="title__wrapper">
           <h2 className="title__h2">Новости</h2>

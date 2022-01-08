@@ -80,13 +80,31 @@ $top-linear: linear-gradient(
   text-transform: uppercase;
 }
 @mixin desktop-h3 {
-  ffont-family: Micra;
+  font-family: Micra;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
   line-height: 150%;
   letter-spacing: 0.015em;
   text-transform: uppercase;
+}
+
+@mixin mobile-h4 {
+  font-family: Micra;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 150%;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+}
+@mixin desktop-h4 {
+  font-family: Micra;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: 0.015em;
 }
 
 @mixin article-mobile-block {

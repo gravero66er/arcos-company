@@ -1,5 +1,5 @@
 // Libraries
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import React from "react"
@@ -15,6 +15,34 @@ export default function NewsSinglePage({ data }) {
     <Layout>
       <section className="container">
         <div className="news-page">
+          <Link className="news-page__link" to="/#news">
+            <svg
+            className="news-page__arrow"
+              width="40"
+              height="14"
+              viewBox="0 0 40 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4.99985 1L1.05354 7.00684L3.08022 9.97441L5.1069 12.942"
+                stroke="#dde2f3"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <rect
+                x="39.1069"
+                y="7.63892"
+                width="37.7906"
+                height="2.01204"
+                rx="1.00602"
+                transform="rotate(179.486 39.1069 7.63892)"
+                fill="#dde2f3"
+              />
+            </svg>
+            <p className="news-page__nav">Назад</p>
+          </Link>
           <h1 className="news-page__title title__h1 title__h1--post">
             {post.title}
           </h1>
