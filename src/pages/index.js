@@ -1,5 +1,8 @@
-import { graphql, Link } from "gatsby"
+// Libraries
+import { graphql } from "gatsby"
 import React from "react"
+
+// Components
 import Activity from "../components/Activity"
 import History from "../components/History"
 import Layout from "../components/Layout"

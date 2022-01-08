@@ -42,7 +42,6 @@
         padding: 2px 10px;
         background: $main-color-easy-gray;
         border-radius: 5px;
-        @include article-mobile-tip;
         color: $main-color-black;
         &:not(:last-child) {
           margin-right: 5px;
@@ -58,7 +57,7 @@
   .news {
     .news__wrapper {
       .news__content {
-        bottom: -60px;
+        bottom: -30px;
         .news__title {
           bottom: 47px;
           margin-bottom: 20px;
@@ -67,7 +66,7 @@
       }
       &:hover {
         .news__content {
-          bottom: 20px;
+          bottom: 60px;
         }
         .news__description {
           transform: translateY(0);

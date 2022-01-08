@@ -1,4 +1,7 @@
+// Libraries
 import React from "react"
+
+// Components
 import FirstHistoryStage from "./FirstHistoryStage"
 import FourthHistoryStage from "./FourthHistoryStage"
 import SecondHistoryStage from "./SecondHistoryStage"

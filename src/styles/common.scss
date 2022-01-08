@@ -45,6 +45,10 @@
   @include mobile-h1;
   color: $main-color-black;
   padding: 0 0 10px;
+  &--post {
+    font-size: 20px;
+    color: $main-color-easy-gray;
+  }
   @media (min-width: 1024px) {
     @include desktop-h1;
     padding: 0 0 30px;
@@ -100,6 +104,12 @@
   &--half {
     @media (min-width: 1024px) {
       width: 50%;
+    }
+  }
+  &--tip {
+    @include article-mobile-tip;
+    @media (min-width: 1024px) {
+      @include article-desktop-tip
     }
   }
   @media (min-width: 1024px) {

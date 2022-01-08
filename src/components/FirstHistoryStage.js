@@ -1,3 +1,4 @@
+// Libraries
 import { StaticImage } from "gatsby-plugin-image"
 import React, { useState } from "react"
 import styled from "styled-components"

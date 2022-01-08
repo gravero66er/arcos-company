@@ -20,7 +20,7 @@ export default function NewsCard({
           </p>
         </section>
         <p className="tags__list">
-          <span className="news__tag">{tag.name}</span>
+          <span className="news__tag article article--tip">{tag.name}</span>
         </p>
       </Link>
     </section>
