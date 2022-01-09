@@ -12,6 +12,12 @@ const Accordion = styled.div`
   .accordion__arrow {
     transform: ${({ open }) => (open ? "rotate(90deg)" : "0")};
   }
+  @media (min-width: 1024px) {
+    height: 100%;
+    .accordion__info {
+      opacity: 1;
+    }
+  }
 `
 
 export default function DevelopAccordion({ title, description, link }) {

@@ -77,13 +77,9 @@
       bottom: -230px;
       left: 0;
       padding: 0 30px 60px;
-      height: 100%;
       z-index: 3;
       .accordion__arrow {
         display: none;
-      }
-      .accordion__info {
-        opacity: 1;
       }
     }
     &:hover {
