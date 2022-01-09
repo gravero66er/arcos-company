@@ -4,9 +4,9 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-// if (process.env.NODE_ENV !== "production") {
-//   dotenv.config()
-// }
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config()
+}
 
 module.exports = {
   /* Your site config here */
