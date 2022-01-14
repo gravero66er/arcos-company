@@ -82,6 +82,10 @@
   @media (min-width: 1024px) {
     @include desktop-h3;
     padding: 0 0 20px;
+    &--small {
+      font-size: 14px;
+      padding: 0 0 10px;
+    }
   }
 }
 
@@ -112,7 +116,7 @@
   &--tip {
     @include article-mobile-tip;
     @media (min-width: 1024px) {
-      @include article-desktop-tip
+      @include article-desktop-tip;
     }
   }
   @media (min-width: 1024px) {

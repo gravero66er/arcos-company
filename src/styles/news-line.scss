@@ -19,7 +19,7 @@
       position: absolute;
       z-index: 2;
       max-width: 410px;
-      bottom: -10px;
+      bottom: 0;
       transition: all 0.3s ease-in-out;
       .news__title {
         @include mobile-h3;
@@ -57,7 +57,7 @@
   .news {
     .news__wrapper {
       .news__content {
-        bottom: -30px;
+        bottom: -20px;
         .news__title {
           bottom: 47px;
           margin-bottom: 20px;

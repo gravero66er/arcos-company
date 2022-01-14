@@ -1,0 +1,45 @@
+.footer {
+  margin-top: 50px;
+  padding: 10px 0;
+  background: $sub-color-hard-gray;
+  &__accordion {
+    overflow: hidden;
+    padding: 12px 25px;
+    .footer__title {
+      padding: 0;
+    }
+    .footer__content {
+      transition: all 0.3s ease-in-out;
+      .footer__link {
+        margin: 15px 0 10px;
+      }
+    }
+  }
+}
+
+// media queries
+
+@media (min-width: 1024px) {
+  .footer {
+    &__accordions {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      width: 80%;
+      .footer__accordion {
+        overflow: hidden;
+        padding: 30px 25px;
+
+        .footer__title {
+          padding: 0;
+        }
+        .footer__content {
+          transition: all 0.3s ease-in-out;
+          .footer__link {
+            margin: 15px 0 10px;
+          }
+        }
+      }
+    }
+  }
+}

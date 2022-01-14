@@ -1,12 +1,12 @@
 // const dotenv = require("dotenv")
 
-const dotenv = require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`,
-})
+const dotenv = require("dotenv")
 
-// if (process.env.NODE_ENV !== "production") {
-//   dotenv.config()
-// }
+if (process.env.NODE_ENV !== "production") {
+  dotenv.config({
+    path: `.env.${process.env.NODE_ENV}`,
+  })
+}
 
 module.exports = {
   /* Your site config here */
@@ -17,7 +17,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,
-    `gatsby-plugin-netlify`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
