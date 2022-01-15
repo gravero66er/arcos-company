@@ -1,18 +1,65 @@
 .footer {
-  margin-top: 50px;
+  margin-top: 30px;
   padding: 10px 0;
   background: $sub-color-hard-gray;
+
   &__accordion {
     overflow: hidden;
     padding: 12px 25px;
+
     .footer__title {
       padding: 0;
     }
+
     .footer__content {
       transition: all 0.3s ease-in-out;
+
       .footer__link {
         margin: 15px 0 10px;
       }
+    }
+  }
+
+  &__contacts {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+
+    .footer__logo {
+      width: 117px;
+      margin-top: 20px;
+    }
+
+    .footer__socialIcons {
+      margin-top: 20px;
+    }
+
+    .footer__dev {
+      margin: 20px 0 30px;
+    }
+
+    &:before, &:after {
+      position: absolute;
+      content: '';
+    }
+
+    &:before {
+      left: -100px;
+      top: 50px;
+      width: 183px;
+      height: 43px;
+      background: url("../images/patterns_pipe.png") 0 0/183px 43px no-repeat;
+    }
+
+    &:after {
+      right: -60px;
+      top: 0;
+      width: 133px;
+      height: 161px;
+      background: url("../images/patterns_vent.png") 0 0/133px 161px no-repeat;
     }
   }
 }
@@ -21,11 +68,13 @@
 
 @media (min-width: 1024px) {
   .footer {
+    margin-top: 50px;
     &__accordions {
       display: flex;
       justify-content: space-between;
       margin: 0 auto;
       width: 80%;
+
       .footer__accordion {
         overflow: hidden;
         padding: 30px 25px;
@@ -33,13 +82,54 @@
         .footer__title {
           padding: 0;
         }
+
         .footer__content {
           transition: all 0.3s ease-in-out;
+
           .footer__link {
             margin: 15px 0 10px;
           }
         }
       }
     }
+
+    &__contacts {
+      margin-top: 50px;
+
+      .footer__logo {
+        width: 310px;
+        margin-top: 30px;
+      }
+
+      .footer__socialIcons {
+        margin-top: 30px;
+      }
+
+      .footer__dev {
+        margin: 30px 0 40px;
+      }
+
+      &:before {
+        left: 60px;
+        top: 50px;
+        width: 255px;
+        height: 60px;
+        background: url("../images/patterns_pipe.png") 0 0/255px 60px no-repeat;
+      }
+
+      &:after {
+        right: 100px;
+        top: -30px;
+        width: 230px;
+        height: 276px;
+        background: url("../images/patterns_vent.png") 0 0/230px 276px no-repeat;
+      }
+    }
+  }
+}
+
+@media (min-width: 1439px) {
+  .footer {
+    border-radius: 5px;
   }
 }
