@@ -11,7 +11,6 @@ if (process.env.NODE_ENV !== "production") {
 module.exports = {
   /* Your site config here */
   plugins: [
-    `gatsby-plugin-gatsby-cloud`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
