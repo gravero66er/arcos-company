@@ -1,5 +1,7 @@
 // Libraries
 import React from "react"
+
+// Components
 import TitleIcon from "./svg/TitleIcon";
 
 export default function Philosophy() {

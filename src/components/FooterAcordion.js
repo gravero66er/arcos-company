@@ -1,5 +1,8 @@
+// Libraries
 import React, {useState} from "react"
 import styled from "styled-components"
+
+// Components
 import StageArrow from "./svg/StageArrow";
 
 const Accordion = styled.div`

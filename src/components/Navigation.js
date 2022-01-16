@@ -3,7 +3,7 @@ import React, {useState} from "react"
 import styled from "styled-components"
 
 // Components
-import Navbar from "./navbar"
+import Navbar from "./Navbar"
 
 const Burger = styled.div`
   position: ${({open}) => (open ? "fixed" : "static")};
@@ -34,9 +34,9 @@ export default function Navigation() {
     return (
         <section>
             <Burger className="burger" open={open} onClick={() => setOpen(!open)}>
-                <div></div>
-                <div></div>
-                <div></div>
+                <div>{}</div>
+                <div>{}</div>
+                <div>{}</div>
             </Burger>
             <Navbar open={open}/>
         </section>
