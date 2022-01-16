@@ -4,7 +4,7 @@ import {Link} from "gatsby"
 import {GatsbyImage} from "gatsby-plugin-image"
 
 export default function NewsCard({
-                                     post: {slug, title, description, tag},
+                                     post: {slug, title, description, badges},
                                      thumbImage,
                                  }) {
     return (
@@ -20,7 +20,9 @@ export default function NewsCard({
                     </p>
                 </section>
                 <p className="tags__list">
-                    <span className="news__tag article article--tip">{tag.name}</span>
+                  {badges.map(badge => (
+                    <span className="news__tag article article--tip">{badge.content}</span>
+                  ))}
                 </p>
             </Link>
         </section>
