@@ -1,24 +1,16 @@
 // Libraries
 import React from "react"
+import TitleIcon from "./svg/TitleIcon";
 
 export default function Philosophy() {
     return (
         <section className="philosophy" id="philosophy">
             <div className="title__wrapper">
                 <h2 className="title__h2">Философия</h2>
-                <svg
-                    className="title__icon"
-                    width="42"
-                    height="40"
-                    viewBox="0 0 42 40"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M9.99004 34.1667C9.05116 34.1667 8.29004 33.4205 8.29004 32.5V7.5C8.29004 6.57952 9.05116 5.83329 9.99004 5.83329H20.836C21.4823 5.82892 22.0752 6.18416 22.366 6.75L23.59 9.16667H32.09C33.0289 9.16667 33.79 9.91286 33.79 10.8333V24.1667C33.79 25.0871 33.0289 25.8333 32.09 25.8333H22.927C22.2869 25.8314 21.7021 25.4771 21.414 24.9167L20.19 22.5H11.69V32.5C11.69 33.4205 10.9289 34.1667 9.99004 34.1667ZM11.69 9.16667V19.1667H21.89L23.59 22.5H30.39V12.5H21.89L20.19 9.16667H11.69Z"
-                        fill="#2E1C1C"
-                    />
-                </svg>
+                <div className="title__icon">
+                    <TitleIcon
+                        path={"M5.5 20.5a1 1 0 01-1-1v-15a1 1 0 011-1h6.38a1 1 0 01.9.55l.72 1.45h5a1 1 0 011 1v8a1 1 0 01-1 1h-5.39a1 1 0 01-.89-.55l-.72-1.45h-5v6a1 1 0 01-1 1zm1-15v6h6l1 2h4v-6h-5l-1-2h-5z"}/>
+                </div>
             </div>
             <p className="article article--half">
                 Бизнес — есть искусство строить стабильное будущее каждый

@@ -1,5 +1,6 @@
 import React, {useState} from "react"
 import styled from "styled-components"
+import StageArrow from "./svg/StageArrow";
 
 const Accordion = styled.div`
   height: ${({open}) => (open ? "100%" : "43px")};
@@ -33,22 +34,9 @@ export default function FooterAccordion({title, children}) {
     >
         <div className="title__wrapper title__wrapper--accordion">
             <div className="footer__title title__h3 title__h3--white title__h3--small">{title}</div>
-            <svg
-                className="footer__arrow"
-                width="14"
-                height="7"
-                viewBox="0 0 14 7"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                    d="M1 1L7 6L10 3.5L13 1"
-                    stroke="white"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                />
-            </svg>
+            <div className='footer__arrow'>
+                <StageArrow color={'#fff'}/>
+            </div>
         </div>
         <section className="footer__content">{children}</section>
     </Accordion>)

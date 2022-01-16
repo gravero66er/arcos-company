@@ -1,20 +1,14 @@
 // Libraries 
 import React from "react"
-import {StaticImage} from "gatsby-plugin-image"
 
 // Components
 import Navigation from "./Navigation"
+import BlueLogo from "./svg/BlueLogo";
 
 export default function Header() {
     return (
         <header className="header">
-            <StaticImage
-                src="../images/logo.png"
-                width={150}
-                height={23}
-                alt="logo"
-                placeholder="tracedSVG"
-            />
+            <BlueLogo/>
             <Navigation/>
             <button className="header__button">Связаться</button>
         </header>

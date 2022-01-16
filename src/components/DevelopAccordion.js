@@ -4,6 +4,9 @@ import {StaticImage} from "gatsby-plugin-image"
 import React, {useState} from "react"
 import styled from "styled-components"
 
+// Components
+import ActivityArrow from "./svg/ActivityArrow";
+
 const Accordion = styled.div`
   height: ${({open}) => (open ? null : "40px")};
 
@@ -35,34 +38,13 @@ export default function DevelopAccordion({title, description, link}) {
                 placeholder="tracedSVG"
             />
             <Accordion className="accordion__content" open={open}>
-                <div className="accrodionTitle__wrapper">
+                <div className="accordionTitle__wrapper">
                     <h2 className="accordion__title title__h2 title__h2--white">
                         {title}
                     </h2>
-                    <svg
-                        className="accordion__arrow"
-                        width="19"
-                        height="14"
-                        viewBox="0 0 19 14"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            d="M13.0526 12.9634L17.0031 7.42774L14.9786 4.69578L12.954 1.96382"
-                            stroke="white"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                        />
-                        <rect
-                            x="-0.000854492"
-                            y="7.08008"
-                            width="17"
-                            height="1"
-                            transform="rotate(-0.513623 -0.000854492 7.08008)"
-                            fill="white"
-                        />
-                    </svg>
+                    <div className="accordion__arrow">
+                        <ActivityArrow/>
+                    </div>
                 </div>
                 <p className="accordion__info article article--white">
                     {description}

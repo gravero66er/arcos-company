@@ -6,6 +6,7 @@ import FirstHistoryStage from "./FirstHistoryStage"
 import FourthHistoryStage from "./FourthHistoryStage"
 import SecondHistoryStage from "./SecondHistoryStage"
 import ThirdHistoryStage from "./ThirdHistoryStage"
+import TitleIcon from "./svg/TitleIcon";
 
 export default function History() {
     const firstStage = {
@@ -37,19 +38,10 @@ export default function History() {
         <section className="history" id="history">
             <div className="title__wrapper">
                 <h2 className="title__h2">История</h2>
-                <svg
-                    className="title__icon"
-                    width="40"
-                    height="40"
-                    viewBox="0 0 40 40"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M21.6667 22.3567C21.9791 22.6693 22.403 22.8449 22.845 22.845H23.8217C24.2636 22.8449 24.6875 22.6693 25 22.3567L32.845 14.5117L36.6667 18.3334V8.33337H26.6667L30.4883 12.155L23.3333 19.31L18.3333 14.31C18.0208 13.9975 17.597 13.8218 17.155 13.8217H16.1783C15.7363 13.8218 15.3125 13.9975 15 14.31L3.82166 25.4884L6.17832 27.845L16.6667 17.3567L21.6667 22.3567Z"
-                        fill="#2E1C1C"
-                    />
-                </svg>
+                <div className="title__icon">
+                    <TitleIcon
+                        path={"M13 13.414a1 1 0 00.707.293h.586a1 1 0 00.707-.293l4.707-4.707L22 11V5h-6l2.293 2.293L14 11.586l-3-3a1 1 0 00-.707-.293h-.586A1 1 0 009 8.586l-6.707 6.707 1.414 1.414L10 10.414l3 3z"}/>
+                </div>
             </div>
             <p className="history__description article article--half">
                 В 2010 году ТД «Аркос» появился на рынке инженерных коммуникаций в
