@@ -9,10 +9,12 @@ import Layout from "../components/Layout";
 import NewsList from "../components/NewsList";
 import Philosophy from "../components/Philosophy";
 import PromoSlider from "../components/PromoSlider";
+import Projects from "../components/Projects";
 
 export default function Home({ data }) {
   const slides = data.slides.nodes;
   const posts = data.posts.nodes;
+  const developments = data.development.nodes;
 
   return (
     <Layout>
@@ -31,6 +33,7 @@ export default function Home({ data }) {
         <History />
         <Philosophy />
       </section>
+      <Projects projects={developments} />
       <NewsList posts={posts} />
     </Layout>
   );
@@ -77,6 +80,21 @@ export const query = graphql`
         }
         body {
           raw
+        }
+        id
+      }
+    }
+    development: allContentfulProject {
+      nodes {
+        badges {
+          content
+        }
+        title
+        description {
+          raw
+        }
+        image {
+          gatsbyImageData(layout: FULL_WIDTH)
         }
         id
       }

@@ -1,8 +1,11 @@
+@import "settings";
+
 .news {
   .news__wrapper {
     .news__img {
       position: relative;
       z-index: 1;
+
       &::after {
         content: "";
         position: absolute;
@@ -13,6 +16,7 @@
         background: $bottom-linear;
       }
     }
+
     .news__content {
       overflow: hidden;
       margin: 0 20px;
@@ -21,32 +25,23 @@
       max-width: 410px;
       bottom: 0;
       transition: all 0.3s ease-in-out;
+
       .news__title {
         @include mobile-h3;
         color: $main-color-white;
       }
+
       .news__description {
         transform: translateY(150px);
         transition: all 0.3s ease-in-out;
         opacity: 0;
       }
     }
+
     .tags__list {
       display: flex;
       justify-content: flex-start;
       padding: 7px 0 0 20px;
-      .news__tag {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 2px 10px;
-        background: $main-color-easy-gray;
-        border-radius: 5px;
-        color: $main-color-black;
-        &:not(:last-child) {
-          margin-right: 5px;
-        }
-      }
     }
   }
 }
@@ -58,16 +53,19 @@
     .news__wrapper {
       .news__content {
         bottom: -20px;
+
         .news__title {
           bottom: 47px;
           margin-bottom: 20px;
           @include desktop-h3;
         }
       }
+
       &:hover {
         .news__content {
           bottom: 60px;
         }
+
         .news__description {
           transform: translateY(0);
           opacity: 1;

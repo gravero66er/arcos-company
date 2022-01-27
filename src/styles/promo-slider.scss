@@ -1,10 +1,15 @@
+@import "settings";
+
 .promo {
   margin-bottom: 60px;
   position: relative;
+
   .slide {
     position: relative;
+
     &__image {
       position: relative;
+
       &::before {
         content: "";
         position: absolute;
@@ -16,20 +21,25 @@
         z-index: 2;
       }
     }
+
     &__image--small {
       display: block;
     }
+
     &__image--middle {
       display: none;
     }
+
     &__image--big {
       display: none;
     }
+
     &__content {
       position: absolute;
       top: 0;
       padding: 30px 0;
       z-index: 2;
+
       .slide__title {
         margin-bottom: 20px;
       }
@@ -42,12 +52,14 @@
       .slide__button {
         @include light-button;
         width: 170px;
+
         &:hover {
           @include light-button-hover;
         }
       }
     }
   }
+
   &__pattern {
     position: absolute;
     bottom: -40px;
@@ -66,6 +78,7 @@
       &__image--small {
         display: none;
       }
+
       &__image--middle {
         display: block;
       }
@@ -79,13 +92,16 @@
       &__image--middle {
         display: none;
       }
+
       &__image--big {
         display: block;
       }
+
       .slide__description {
         max-width: 399px;
       }
     }
+
     &__pattern {
       bottom: -85px;
       left: 220px;
@@ -109,6 +125,7 @@
         padding: 110px 0;
       }
     }
+
     &__pattern {
       left: 390px;
       width: 180px;

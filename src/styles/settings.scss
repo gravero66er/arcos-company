@@ -11,24 +11,29 @@ $sub-color-middle-gray: #9fa6c1;
 
 // gradients
 $left-linear: linear-gradient(
-  90deg,
-  $main-color-light-blue 40.6%,
-  rgba(196, 196, 196, 0) 100%
+                90deg,
+                $main-color-light-blue 40.6%,
+                rgba(196, 196, 196, 0) 100%
+);
+$corner-linear: linear-gradient(
+                330.77deg,
+                rgba(196, 196, 196, 0) -2.05%,
+                $main-color-light-blue 88.67%
 );
 $bottom-linear: linear-gradient(
-  180.11deg,
-  rgba(196, 196, 196, 0) 0.1%,
-  $main-color-light-blue 93.67%
+                180.11deg,
+                rgba(196, 196, 196, 0) 0.1%,
+                $main-color-light-blue 93.67%
 );
 $bottom-linear-full: linear-gradient(
-  180.11deg,
-  rgba(196, 196, 196, 0) 1%,
-  $main-color-light-blue 120%
+                180.11deg,
+                rgba(196, 196, 196, 0) 1%,
+                $main-color-light-blue 120%
 );
 $top-linear: linear-gradient(
-  330.77deg,
-  rgba(196, 196, 196, 0) -2.05%,
-  $main-color-light-blue 88.67%
+                330.77deg,
+                rgba(196, 196, 196, 0) -2.05%,
+                $main-color-light-blue 88.67%
 );
 
 // mixins
@@ -41,6 +46,7 @@ $top-linear: linear-gradient(
   letter-spacing: 0.015em;
   text-transform: uppercase;
 }
+
 @mixin desktop-h1 {
   font-family: Micra Bold;
   font-style: normal;
@@ -60,6 +66,7 @@ $top-linear: linear-gradient(
   letter-spacing: 0.015em;
   text-transform: uppercase;
 }
+
 @mixin desktop-h2 {
   font-family: Micra Bold;
   font-style: normal;
@@ -79,6 +86,7 @@ $top-linear: linear-gradient(
   letter-spacing: 0.015em;
   text-transform: uppercase;
 }
+
 @mixin desktop-h3 {
   font-family: Micra;
   font-style: normal;
@@ -98,6 +106,7 @@ $top-linear: linear-gradient(
   letter-spacing: 0.015em;
   text-transform: uppercase;
 }
+
 @mixin desktop-h4 {
   font-family: Micra;
   font-style: normal;
@@ -115,6 +124,7 @@ $top-linear: linear-gradient(
   line-height: 150%;
   letter-spacing: 0.015em;
 }
+
 @mixin article-desktop-block {
   font-family: Roboto;
   font-style: normal;
@@ -123,6 +133,7 @@ $top-linear: linear-gradient(
   line-height: 150%;
   letter-spacing: 0.015em;
 }
+
 @mixin article-mobile-tip {
   font-family: Roboto;
   font-style: normal;
@@ -131,6 +142,7 @@ $top-linear: linear-gradient(
   line-height: 150%;
   letter-spacing: 0.06em;
 }
+
 @mixin article-desktop-tip {
   font-family: Roboto;
   font-style: normal;
@@ -163,6 +175,7 @@ $top-linear: linear-gradient(
     @include article-desktop-block;
   }
 }
+
 @mixin light-button {
   display: flex;
   flex-direction: column;
@@ -178,6 +191,7 @@ $top-linear: linear-gradient(
     @include article-desktop-block;
   }
 }
+
 @mixin light-button-hover {
   display: flex;
   flex-direction: column;
@@ -206,21 +220,21 @@ $top-linear: linear-gradient(
     width: 63px;
     height: 76px;
     &:hover {
-      box-shadow: 0px 2px 8px #9fa6c1;
+      box-shadow: 0 2px 8px #9fa6c1;
       cursor: pointer;
     }
   }
 }
 
 //fonts
-// @import url(https://allfont.ru/allfont.css?fonts=micra);
-// @import url(https://allfont.ru/allfont.css?fonts=micra-bold);
 @font-face {
   font-family: "Micra";
   src: url("../fonts/micra.woff");
 }
+
 @font-face {
   font-family: "Micra Bold";
   src: url("../fonts/micra-bold.woff");
 }
+
 @import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap);

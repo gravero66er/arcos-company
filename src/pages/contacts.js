@@ -1,5 +1,5 @@
-import React from "react"
-import Layout from "../components/Layout"
+import React from "react";
+import Layout from "../components/Layout";
 
 export default function Contacts() {
   return (
@@ -14,5 +14,5 @@ export default function Contacts() {
         </p>
       </div>
     </Layout>
-  )
+  );
 }
