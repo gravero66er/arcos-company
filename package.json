@@ -34,6 +34,7 @@
     "react-slick": "^0.28.1",
     "reactide-config": "^1.0.2",
     "sass": "^1.47.0",
+    "sass-loader": "^12.4.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.3"
   },
@@ -49,7 +50,6 @@
     "file-loader": "^4.0.0",
     "html-webpack-plugin": "^3.2.0",
     "prettier": "^2.4.1",
-    "sass-loader": "^12.4.0",
     "style-loader": "^0.23.1",
     "url-loader": "^2.0.0",
     "webpack": "^4.33.0",
