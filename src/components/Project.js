@@ -3,7 +3,6 @@ import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 function Project({ project: { id, title, badges, description }, image }) {
-  console.log(badges);
   return (
     <section className="project" key={id}>
       <h3 className="project__title title__h3 title__h3--small">«{title}»</h3>
