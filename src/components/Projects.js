@@ -18,7 +18,7 @@ function Projects({ projects }) {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1140,
+        breakpoint: 1260,
         settings: {
           dots: false,
           arrows: false,
