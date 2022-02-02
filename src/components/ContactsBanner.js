@@ -6,7 +6,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import ContactsPattern from "./svg/ContactsPattern";
 
 function ContactsBanner({ contacts }) {
-  console.log(contacts);
   const imageSmall = getImage(contacts[0].imageSmall);
   const imageMiddle = getImage(contacts[0].imageMiddle);
   const imageBig = getImage(contacts[0].imageBig);

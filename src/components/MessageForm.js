@@ -36,8 +36,8 @@ function MessageForm() {
       <form ref={form} className="message__form" onSubmit={(e) => {
         setSent(true);
         e.preventDefault();
-        e.target.reset();
         sendMessage();
+        setTimeout(e.target.reset(), 5000);
       }}>
         <div>
           <input className="feedback__input article" type="string" placeholder="Имя" name="name" />
@@ -47,7 +47,8 @@ function MessageForm() {
         <textarea className="feedback__input feedback__input--text article" placeholder="Сообщение" name="message" />
         <div className="message__buttons">
           <button className="message__button">Отправить вопрос</button>
-          <button className="message__button message__button--call" type="button" onClick={() => setModalActive(true)}>Заказать
+          <button className="message__button message__button--call" type="button"
+                  onClick={() => setModalActive(true)}>Заказать
             звонок
           </button>
         </div>

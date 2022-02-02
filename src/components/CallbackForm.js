@@ -34,8 +34,8 @@ export default function CallbackForm({ setActive }) {
       <form ref={form} className="callback__form" onSubmit={(e) => {
         setSent(true);
         e.preventDefault();
-        e.target.reset();
         sendEmail();
+        setTimeout(e.target.reset(), 5000);
       }}>
         <input className="feedback__input article" type="number" placeholder="Телефон" name="phone" />
         <input className="feedback__input article" type="string" placeholder="Имя" name="name" />
