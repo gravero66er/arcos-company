@@ -49,7 +49,7 @@
       flex-direction: column;
       text-align: right;
       height: 185px;
-      margin-bottom: 38px;
+      margin-bottom: 45px;
 
       &__item {
         color: $main-color-white;
@@ -83,7 +83,6 @@
 
     &__button {
       @include light-button;
-      border: 1px solid $main-color-light-blue;
 
       &:hover {
         @include light-button-hover;
@@ -154,10 +153,6 @@
   .header__navbar {
     .navbar__patterns {
       display: none;
-    }
-
-    .menu {
-      margin-bottom: 20px;
     }
   }
 }

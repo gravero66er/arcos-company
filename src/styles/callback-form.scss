@@ -1,0 +1,64 @@
+@import "settings";
+
+.callback {
+  max-width: 320px;
+
+  &__form {
+    .callback__buttons {
+      display: flex;
+      justify-content: flex-start;
+
+      .callback__button {
+        @include primary-button;
+        margin-right: 5px;
+
+        &--close {
+          @include light-button;
+          margin-right: 0;
+        }
+      }
+    }
+
+    .callback__notify {
+      margin-top: 10px;
+      opacity: 0;
+      transition: all 0.3s ease-in-out;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// media queries
+
+@media (min-width: 1024px) {
+  .callback {
+    max-width: 500px;
+
+    .article {
+      margin-bottom: 20px;
+    }
+
+    &__form {
+      .callback__buttons {
+        .callback__button {
+          margin-right: 10px;
+
+          &:hover {
+            @include primary-button-hover
+          }
+
+          &--close:hover {
+            @include light-button-hover-shadow
+          }
+        }
+      }
+
+      p {
+        margin-top: 15px;
+      }
+    }
+  }
+}

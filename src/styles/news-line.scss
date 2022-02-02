@@ -42,6 +42,9 @@
       display: flex;
       justify-content: flex-start;
       padding: 7px 0 0 20px;
+      .tag {
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -53,7 +56,7 @@
     .news__wrapper {
       border-radius: 5px;
       .news__content {
-        bottom: -20px;
+        bottom: -60px;
 
         .news__title {
           bottom: 47px;
@@ -64,7 +67,7 @@
 
       &:hover {
         .news__content {
-          bottom: 60px;
+          bottom: 30px;
         }
 
         .news__description {

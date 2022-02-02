@@ -35,7 +35,7 @@
 
     &__button {
       @include light-button;
-      width: 160px;
+      width: 200px;
 
       &:hover {
         @include light-button-hover;

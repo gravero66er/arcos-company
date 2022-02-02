@@ -1,18 +1,49 @@
+// Libraries
 import React from "react";
-import Layout from "../components/Layout";
+import { graphql } from "gatsby";
 
-export default function Contacts() {
+// Components
+import Layout from "../components/Layout";
+import ContactsBanner from "../components/ContactsBanner";
+import MessageForm from "../components/MessageForm";
+import ContactsInfo from "../components/ContactsInfo";
+
+
+export default function Contacts({ data }) {
+  const contacts = data.contacts.nodes;
+
   return (
     <Layout>
-      <div>
-        <h1>Контакты</h1>
-        <p>
-          Вы можете заполнить форму обратной связи и мы обязательно позвоним вам
-          и ответим на любой вопрос. Кроме того, вы можете позвонить нам,
-          написать на электронную почту или приехать к нам в офис в рабочее
-          время.
+      <ContactsBanner contacts={contacts} />
+      <section className="container">
+        <h1 className="title__h1">Контакты</h1>
+        <p className="article">
+          Вы можете задать вопрос и мы ответим вам в этот же день, заказать звонок и мы перезвоним вам в течение 15 минут. Кроме того,
+          вы можете позвонить нам самостоятельно, написать на электронную почту или приехать к нам в офис в рабочее время.
         </p>
-      </div>
+        <MessageForm />
+        <ContactsInfo contacts={contacts} />
+      </section>
     </Layout>
   );
 }
+
+export const query = graphql`
+  {
+    contacts: allContentfulContacts {
+    nodes {
+      imageBig {
+        gatsbyImageData(layout: FULL_WIDTH)
+      }
+      imageMiddle {
+        gatsbyImageData(layout: FULL_WIDTH)
+      }
+      imageSmall {
+        gatsbyImageData(layout: FULL_WIDTH)
+      }
+      phone
+      email
+    }
+  }
+  }
+`;

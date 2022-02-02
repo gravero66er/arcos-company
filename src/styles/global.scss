@@ -1,9 +1,13 @@
+// Settings
 @import "./reset.sass";
 @import "./settings.scss";
 @import "./common.scss";
+
+// Components
 @import "./modal.scss";
 @import "./slick-slider.scss";
-
+@import "./callback-form.scss";
+@import "./message-form.scss";
 @import "./header.scss";
 @import "./promo-slider.scss";
 @import "./activity-accordion.scss";
@@ -13,4 +17,6 @@
 @import "./news-line.scss";
 @import "./news.scss";
 @import "./footer.scss";
+@import "./contacts-banner.scss";
+@import "./contacts.scss";
 

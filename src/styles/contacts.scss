@@ -1,0 +1,67 @@
+@import "settings";
+
+.contacts__info {
+  margin-bottom: 50px;
+
+  .contacts__data {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    .contacts__links {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 10px;
+
+      div:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      .contacts__phone, .contacts__email {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-transform: uppercase;
+
+        svg {
+          height: 24px;
+          margin-right: 10px;
+        }
+
+        a {
+          color: $main-color-black;
+        }
+      }
+    }
+  }
+}
+
+// media queries
+
+@media (min-width: 850px) {
+  .contacts__info {
+    .contacts__data {
+      grid-template-columns: 40% 60%;
+      grid-gap: 20px;
+
+      .contacts__links {
+        flex-direction: column;
+
+        div {
+          margin-bottom: 25px;
+        }
+
+        .contacts__phone, .contacts__email {
+          svg {
+            height: 40px;
+            margin-right: 20px;
+          }
+        }
+      }
+      .contacts__content {
+        .contacts__description {
+          width: 286px;
+        }
+      }
+    }
+  }
+}

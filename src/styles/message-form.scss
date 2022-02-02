@@ -1,0 +1,80 @@
+@import "settings";
+
+.message {
+  .message__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 20px;
+
+    .message__buttons {
+      display: flex;
+      flex-direction: column;
+
+      .message__button {
+        @include primary-button;
+        margin: 0 0 10px;
+
+        &--call {
+          @include light-button;
+        }
+      }
+    }
+  }
+
+  .callback__notify {
+    margin-top: 10px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}
+
+// media queries
+
+@media (min-width: 850px) {
+  .message {
+    .message__form {
+      grid-template-columns: 1fr 1fr;
+
+      .message__buttons {
+        flex-direction: row;
+
+        .message__button {
+          @include primary-button;
+          margin: 0 10px 0 0;
+
+          &--call {
+            @include light-button;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .message {
+    .article {
+      margin-bottom: 20px;
+    }
+
+    .message__form {
+      .message__buttons {
+        .message__button {
+          &:hover {
+            @include primary-button-hover
+          }
+
+          &--call {
+            &:hover {
+              @include light-button-hover-shadow
+            }
+          }
+        }
+      }
+    }
+  }
+}
