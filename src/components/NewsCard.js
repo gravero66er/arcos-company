@@ -1,14 +1,15 @@
 // Libraries
-import React from "react";
-import { Link } from "gatsby";
-import { GatsbyImage } from "gatsby-plugin-image";
+import React from "react"
+import { Link } from "gatsby"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 export default function NewsCard({
-                                   post: { slug, title, description, badges },
-                                   thumbImage
-                                 }) {
+  post: { slug, title, description, badges },
+  thumbImage,
+  key,
+}) {
   return (
-    <section className="news__wrapper">
+    <section className="news__wrapper" key={key}>
       <Link to={"/" + slug}>
         <div className="news__img">
           <GatsbyImage image={thumbImage} alt="image" />
@@ -26,5 +27,5 @@ export default function NewsCard({
         </p>
       </Link>
     </section>
-  );
+  )
 }

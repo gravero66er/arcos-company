@@ -53,7 +53,7 @@ function MessageForm() {
           </button>
         </div>
       </form>
-      <p className={sent ? "callback__notify article active" : "callback__notify article"}>Ваша сообщение
+      <p className={sent ? "callback__notify article active" : "callback__notify article"}>Ваше сообщение
         отправлено!</p>
       <Modal active={modalActive} setActive={setModalActive}>
         <CallbackForm setActive={setModalActive} />

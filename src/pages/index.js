@@ -1,23 +1,23 @@
 // Libraries
-import { graphql } from "gatsby";
-import React from "react";
+import { graphql } from "gatsby"
+import React from "react"
 
 // Components
-import Activity from "../components/Activity";
-import History from "../components/History";
-import Layout from "../components/Layout";
-import NewsList from "../components/NewsList";
-import Philosophy from "../components/Philosophy";
-import PromoSlider from "../components/PromoSlider";
-import Projects from "../components/Projects";
+import Activity from "../components/Activity"
+import History from "../components/History"
+import Layout from "../components/Layout"
+import NewsList from "../components/NewsList"
+import Philosophy from "../components/Philosophy"
+import PromoSlider from "../components/PromoSlider"
+import { Seo } from "../components/Seo"
 
 export default function Home({ data }) {
-  const slides = data.slides.nodes;
-  const posts = data.posts.nodes;
-  const developments = data.development.nodes;
+  const slides = data.slides.nodes
+  const posts = data.posts.nodes
 
   return (
     <Layout>
+      <Seo />
       <PromoSlider slides={slides} />
       <section className="container">
         <h1 className="title__h1">Холдинг</h1>
@@ -33,10 +33,9 @@ export default function Home({ data }) {
         <History />
         <Philosophy />
       </section>
-      <Projects projects={developments} />
       <NewsList posts={posts} />
     </Layout>
-  );
+  )
 }
 
 export const query = graphql`
@@ -56,6 +55,7 @@ export const query = graphql`
           raw
         }
         title
+        id
         link {
           link
         }
@@ -63,9 +63,9 @@ export const query = graphql`
     }
     posts: allContentfulPost(sort: { order: DESC, fields: date }) {
       nodes {
-         badges {
-           content
-         }
+        badges {
+          content
+        }
         title
         description {
           description
@@ -84,20 +84,5 @@ export const query = graphql`
         id
       }
     }
-    development: allContentfulProject {
-      nodes {
-        badges {
-          content
-        }
-        title
-        description {
-          raw
-        }
-        image {
-          gatsbyImageData(layout: FULL_WIDTH)
-        }
-        id
-      }
-    }
   }
-`;
+`

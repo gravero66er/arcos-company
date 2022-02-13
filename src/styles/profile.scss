@@ -1,0 +1,28 @@
+@import "settings";
+
+.profile {
+  &__button {
+    @include primary-button
+  }
+}
+
+// media queries
+
+@media (min-width: 400px) {
+  .profile {
+    &__button {
+      max-width: 230px;
+    }
+  }
+}
+
+@media (min-width: 400px) {
+  .profile {
+    &__button {
+      &:hover {
+        @include primary-button-hover
+      }
+    }
+  }
+}
+

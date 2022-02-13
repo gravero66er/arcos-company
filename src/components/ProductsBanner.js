@@ -1,37 +1,39 @@
 // Libraries
 import React from "react";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import ContactsPattern from "./svg/ContactsPattern";
+import ProductsPattern from "./svg/ProductsPattern";
 
 // Components
-import ContactsPattern from "./svg/ContactsPattern";
 
-function ContactsBanner({ contacts }) {
-  const imageSmall = getImage(contacts[0].imageSmall);
-  const imageMiddle = getImage(contacts[0].imageMiddle);
-  const imageBig = getImage(contacts[0].imageBig);
+
+function ProductsBanner({ products }) {
+  const imageSmall = getImage(products[0].imageSmall);
+  const imageMiddle = getImage(products[0].imageMiddle);
+  const imageBig = getImage(products[0].imageBig);
   return (
-    <section className="contacts__banner">
-      <div className="contacts__image contacts__image--small">
+    <section className="products__banner">
+      <div className="products__image products__image--small">
         <GatsbyImage image={imageSmall} alt="image" />
       </div>
-      <div className="contacts__image contacts__image--middle">
+      <div className="products__image products__image--middle">
         <GatsbyImage image={imageMiddle} alt="image" />
       </div>
-      <div className="contacts__image contacts__image--big">
+      <div className="products__image products__image--big">
         <GatsbyImage image={imageBig} alt="image" />
       </div>
-      <section className="container contacts__content">
-        <h3 className="contacts__title title__h3 title__h3--white">Мы на связи</h3>
-        <p className="contacts__description article article--white ">
-          Мы открыты к диалогу! Вы всегда можете обратиться с интересными предложениями и задать интересующие вопросы
-          всеми видами современных коммуникаций: Instagram, VK, телефон, форма обратной связи.
+      <section className="container products__content">
+        <h3 className="products__title title__h3 title__h3--white">Бренды и продукты</h3>
+        <p className="products__description article article--white ">
+          Среди наших поставщиков и партнёров крупные международные компании и заводы. В нашем товарном портфеле вы
+          сможете найти множество качественных решений по оптимальным ценам.
         </p>
       </section>
-      <div className="contacts__pattern">
-        <ContactsPattern />
+      <div className="products__pattern">
+        <ProductsPattern />
       </div>
     </section>
   );
 }
 
-export default ContactsBanner;
+export default ProductsBanner;

@@ -1,58 +1,47 @@
 @import "settings";
 
-.contacts__banner {
+.products__banner {
   margin-bottom: 30px;
   position: relative;
 
-  .contacts__image {
+  .products__image {
     position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      background: $left-linear;
-      z-index: 2;
-    }
   }
 
-  .contacts__image--small {
+  .products__image--small {
     display: block;
   }
 
-  .contacts__image--middle {
+  .products__image--middle {
     display: none;
   }
 
-  .contacts__image--big {
+  .products__image--big {
     display: none;
   }
 
-  .contacts__content {
+  .products__content {
     position: absolute;
     top: 0;
     padding: 30px 0;
     z-index: 2;
 
-    .contacts__title {
+    .products__title {
       margin-bottom: 20px;
     }
 
-    .contacts__description {
+    .products__description {
       max-width: 233px;
       margin-bottom: 32px;
     }
   }
 
-  .contacts__pattern {
+  .products__pattern {
     position: absolute;
-    bottom: -40px;
-    right: -30px;
-    width: 78px;
-    height: 79px;
+    bottom: -20px;
+    right: -50px;
+    width: 209px;
+    height: 90px;
     z-index: 2;
   }
 }
@@ -60,58 +49,58 @@
 // media queries
 
 @media (min-width: 570px) {
-  .contacts__banner {
-    .contacts__image--small {
+  .products__banner {
+    .products__image--small {
       display: none;
     }
 
-    .contacts__image--middle {
+    .products__image--middle {
       display: block;
     }
   }
 }
 
 @media (min-width: 830px) {
-  .contacts__banner {
-    .contacts__image--middle {
+  .products__banner {
+    .products__image--middle {
       display: none;
     }
 
-    .contacts__image--big {
+    .products__image--big {
       display: block;
     }
 
-    .contacts__content {
-      .contacts__description {
+    .products__content {
+      .products__description {
         max-width: 399px;
       }
     }
 
-    .contacts__pattern {
+    .products__pattern {
       bottom: -40px;
       right: 220px;
-      width: 127px;
-      height: 128px;
+      width: 209px;
+      height: 90px;
     }
   }
 }
 
 @media (min-width: 1024px) {
-  .contacts__banner {
+  .products__banner {
     margin-bottom: 140px;
 
-    .contacts__pattern {
+    .products__pattern {
       left: 390px;
-      bottom: -56px;
-      width: 178px;
-      height: 179px;
+      bottom: -45px;
+      width: 247px;
+      height: 107px;
     }
   }
 }
 
 @media (min-width: 1300px) {
-  .contacts__banner {
-    .contacts__content {
+  .products__banner {
+    .products__content {
       top: 0;
       padding: 110px 0;
     }

@@ -24,7 +24,7 @@ function ContactsBanner({ contacts }) {
         <h3 className="contacts__title title__h3 title__h3--white">Мы на связи</h3>
         <p className="contacts__description article article--white ">
           Мы открыты к диалогу! Вы всегда можете обратиться с интересными предложениями и задать интересующие вопросы
-          всеми видами современных коммуникаций: Instagram, VK, Телефон, форма обратной связи.
+          всеми видами современных коммуникаций: Instagram, VK, телефон, форма обратной связи.
         </p>
       </section>
       <div className="contacts__pattern">

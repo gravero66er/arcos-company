@@ -1,18 +1,18 @@
 // Libraries
-import React, { useRef } from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
-import { getImage } from "gatsby-plugin-image";
+import React, { useRef } from "react"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+import Slider from "react-slick"
+import { getImage } from "gatsby-plugin-image"
 
 // Components
-import PromoSlide from "./PromoSlide";
-import SliderLeftArrow from "./svg/SliderLeftArrow";
-import SliderRightArrow from "./svg/SliderRightArrow";
-import PromoPattern from "./svg/PromoPattern";
+import PromoSlide from "./PromoSlide"
+import SliderLeftArrow from "./svg/SliderLeftArrow"
+import SliderRightArrow from "./svg/SliderRightArrow"
+import PromoPattern from "./svg/PromoPattern"
 
 export default function PromoSlider({ slides }) {
-  const sliderRef = useRef(null);
+  const sliderRef = useRef(null)
   const settings = {
     dots: true,
     arrows: false,
@@ -20,8 +20,9 @@ export default function PromoSlider({ slides }) {
     autoplay: false,
     speed: 300,
     slidesToShow: 1,
-    slidesToScroll: 1
-  };
+    slidesToScroll: 1,
+  }
+
   return (
     <section className="promo">
       <Slider {...settings} ref={sliderRef}>
@@ -53,5 +54,5 @@ export default function PromoSlider({ slides }) {
         <PromoPattern />
       </div>
     </section>
-  );
+  )
 }

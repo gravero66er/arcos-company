@@ -1,19 +1,27 @@
 // Libraries
-import { graphql, Link } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import { renderRichText } from "gatsby-source-contentful/rich-text";
-import React from "react";
+import { graphql, Link } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
+import React from "react"
 
 // Components
-import Layout from "../components/Layout";
+import Layout from "../components/Layout"
+import { Seo } from "../components/Seo"
 
 export default function NewsSinglePage({ data }) {
-  const post = data.contentfulPost;
-  const mainImage = getImage(post.mainImage);
-  console.log(post);
+  const post = data.contentfulPost
+  const mainImage = getImage(post.mainImage)
+  const seoImage = post.mainImage.file.url
+
   return (
     <Layout>
       <section className="container">
+        <Seo
+          title={post.title}
+          image={seoImage}
+          description={post.description.description}
+          keywords={post.badges.map(badge => badge.content)}
+        />
         <div className="news-page">
           <Link className="news-page__link" to="/#news">
             <svg
@@ -61,7 +69,7 @@ export default function NewsSinglePage({ data }) {
         </div>
       </section>
     </Layout>
-  );
+  )
 }
 
 export const query = graphql`
@@ -74,10 +82,16 @@ export const query = graphql`
       date(formatString: "DD.MM.YYYY")
       mainImage {
         gatsbyImageData(layout: FULL_WIDTH)
+        file {
+          url
+        }
       }
       body {
         raw
       }
+      badges {
+        content
+      }
     }
   }
-`;
+`

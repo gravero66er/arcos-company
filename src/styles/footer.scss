@@ -30,6 +30,10 @@
     flex-direction: column;
     margin-top: 20px;
 
+    .footer__phone {
+      color: $main-color-white;
+    }
+
     .footer__logo {
       width: 117px;
       margin-top: 20px;

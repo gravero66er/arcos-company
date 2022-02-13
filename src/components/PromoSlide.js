@@ -1,23 +1,25 @@
 // Libraries
-import React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
-import { Link } from "gatsby";
-import { renderRichText } from "gatsby-source-contentful/rich-text";
+import React from "react"
+import { GatsbyImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 
 export default function PromoSlide({
-                                     slide: { title, description, link },
-                                     imageSmall,
-                                     imageMiddle,
-                                     imageBig
-                                   }) {
+  slide: { title, description, link },
+  imageSmall,
+  imageMiddle,
+  imageBig,
+  key,
+}) {
   return (
-    <section className="slide">
+    <section className="slide" key={key}>
       <div className="slide__image slide__image--small">
         <GatsbyImage image={imageSmall} alt="image" />
       </div>
       <div className="slide__image slide__image--middle">
         <GatsbyImage image={imageMiddle} alt="image" />
       </div>
+      qwse
       <div className="slide__image slide__image--big">
         <GatsbyImage image={imageBig} alt="image" />
       </div>
@@ -36,5 +38,5 @@ export default function PromoSlide({
         </Link>
       </section>
     </section>
-  );
+  )
 }

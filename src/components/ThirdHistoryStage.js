@@ -47,7 +47,7 @@ export default function ThirdHistoryStage({ color, years, title, info }) {
       </section>
       <StaticImage
         className="stage__img"
-        src="../images/first-stage.png"
+        src="../images/third-stage.png"
         alt="основание"
         placeholder="tracedSVG"
       />

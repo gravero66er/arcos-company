@@ -1,0 +1,46 @@
+@import "settings";
+
+.openings {
+  margin-bottom: 50px;
+  .vacancy {
+    background: $main-color-light-gray;
+    padding: 30px 20px;
+    border-radius: 5px;
+    &__skills {
+      margin-bottom: 20px;
+      li {
+        position: relative;
+        padding-left: 18px;
+        &::before {
+          content: "—";
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+    &__salary {
+      margin-bottom: 10px;
+    }
+    &__button {
+      @include mobile-h4;
+      color: $main-color-black;
+      padding-bottom: 1px;
+      border-bottom: 1px solid $main-color-black;
+      position: relative;
+      &::after {
+        content: "\2192";
+        position: absolute;
+        right: -12px;
+      }
+    }
+  }
+}
+
+// media queries
+
+@media (min-width: 1024px) {
+  .openings {
+    margin-bottom: 30px;
+  }
+}

@@ -7,6 +7,11 @@
     display: grid;
     grid-template-columns: 1fr;
 
+    .contacts__map {
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
     .contacts__links {
       display: flex;
       justify-content: flex-start;
@@ -57,6 +62,7 @@
           }
         }
       }
+
       .contacts__content {
         .contacts__description {
           width: 286px;

@@ -15,33 +15,30 @@ export default function Footer() {
         <FooterAccordion title={"Холдинг"}>
           <FooterLink title={"История"} link={"/#history"} />
           <FooterLink title={"Философия"} link={"/#philosophy"} />
-          <FooterLink title={"Проекты"} link={"/#projects"} />
           <FooterLink title={"Новости"} link={"/#news"} />
         </FooterAccordion>
         <FooterAccordion title={"Продукты"}>
+          <FooterLink title={"Бренды"} link={"/products/#brands"} />
+          <FooterLink title={"Проекты"} link={"/products/#projects"} />
+          <FooterLink title={"Связаться с нами"} link={"/products/#feedback"} />
+        </FooterAccordion>
+        {/* <FooterAccordion title={"Информация"}>
           <FooterLink title={"История"} link={"/#history"} />
           <FooterLink title={"Философия"} link={"/#philosophy"} />
           <FooterLink title={"Проекты"} link={"/#projects"} />
           <FooterLink title={"Новости"} link={"/#news"} />
-        </FooterAccordion>
-        <FooterAccordion title={"Информация"}>
-          <FooterLink title={"История"} link={"/#history"} />
-          <FooterLink title={"Философия"} link={"/#philosophy"} />
-          <FooterLink title={"Проекты"} link={"/#projects"} />
-          <FooterLink title={"Новости"} link={"/#news"} />
-        </FooterAccordion>
+        </FooterAccordion> */}
         <FooterAccordion title={"Карьера"}>
-          <FooterLink title={"История"} link={"/#history"} />
-          <FooterLink title={"Философия"} link={"/#philosophy"} />
-          <FooterLink title={"Проекты"} link={"/#projects"} />
-          <FooterLink title={"Новости"} link={"/#news"} />
+          <FooterLink title={"Культура"} link={"/career/#culture"} />
+          <FooterLink title={"Вакансии"} link={"/career/#vacancy"} />
+          <FooterLink title={"Анкета"} link={"/career/#profile"} />
         </FooterAccordion>
       </div>
     </section>
     <section className="footer__contacts">
-      <div className="footer__phone title__h3 title__h3--white">
+      <a type="tel" className="footer__phone title__h3 title__h3--white">
         8 (982) 156 78 54
-      </div>
+      </a>
       <div className="footer__logo">
         <WhiteLogo />
       </div>

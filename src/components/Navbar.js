@@ -1,19 +1,20 @@
 // Libraries
-import React, { useState } from "react";
-import { Link } from "gatsby";
-import styled from "styled-components";
-import { StaticImage } from "gatsby-plugin-image";
+import React, { useState } from "react"
+import { Link } from "gatsby"
+import styled from "styled-components"
+import { StaticImage } from "gatsby-plugin-image"
 
 // Components
-import SocialIcons from "./SocialIcons";
-import Modal from "./Modal";
-import CallbackForm from "./CallbackForm";
+import SocialIcons from "./SocialIcons"
+import Modal from "./Modal"
+import CallbackForm from "./CallbackForm"
+import NavbarPattern from "./svg/NavbarPattern"
 
 const Nav = styled.nav`
   right: ${({ open }) => (open ? "0" : "-100%")};
-`;
+`
 export default function Navbar({ open }) {
-  const [modalActive, setModalActive] = useState(false);
+  const [modalActive, setModalActive] = useState(false)
   return (
     <>
       <Modal active={modalActive} setActive={setModalActive}>
@@ -27,9 +28,9 @@ export default function Navbar({ open }) {
           <Link className="menu__item" to="/products">
             Продукты
           </Link>
-          <Link className="menu__item" to="/info">
+          {/* <Link className="menu__item" to="/info">
             Информация
-          </Link>
+          </Link> */}
           <Link className="menu__item" to="/career">
             Карьера
           </Link>
@@ -37,15 +38,12 @@ export default function Navbar({ open }) {
             Контакты
           </Link>
         </div>
-        <button className="navbar__button" onClick={() => setModalActive(true)}>Связаться</button>
+        <button className="navbar__button" onClick={() => setModalActive(true)}>
+          Связаться
+        </button>
         <SocialIcons />
-        <StaticImage
-          className="navbar__patterns"
-          src="../images/patterns_menu.png"
-          alt="patterns"
-          placeholder="tracedSVG"
-        />
+        <NavbarPattern />
       </Nav>
     </>
-  );
+  )
 }
