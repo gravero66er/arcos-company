@@ -1,12 +1,8 @@
-import * as React from "react";
+import * as React from "react"
 
 function ProductsPattern() {
   return (
-    <svg
-      viewBox="0 0 160 69"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg viewBox="0 0 160 69" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         fillRule="evenodd"
         clipRule="evenodd"
@@ -20,7 +16,7 @@ function ProductsPattern() {
         fill="#3078BC"
       />
     </svg>
-  );
+  )
 }
 
-export default ProductsPattern;
+export default ProductsPattern

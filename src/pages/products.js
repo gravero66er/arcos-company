@@ -17,7 +17,7 @@ export default function Products({ data }) {
   return (
     <Layout>
       <Seo
-        title={"Инженераная сантехника"}
+        title={"Инженерная сантехника"}
         description={
           "Многообразие брендов для самых разнообразных инженерных решений: DAB, Фарфор, Профсан, LD, Buderus, Con-pipe, Sanha, Hoft."
         }

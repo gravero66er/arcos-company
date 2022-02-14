@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 
 function ActivityArrow(props) {
   return (
@@ -19,7 +19,7 @@ function ActivityArrow(props) {
       />
       <path fill="#fff" d="M-.001 7.08l17-.152.008 1L.008 8.08z" />
     </svg>
-  );
+  )
 }
 
-export default ActivityArrow;
+export default ActivityArrow

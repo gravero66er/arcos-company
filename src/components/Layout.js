@@ -1,10 +1,10 @@
 // Libraries
-import React from "react";
-import "../styles/global.scss";
+import React from "react"
+import "../styles/global.scss"
 
 // Components
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./Header"
+import Footer from "./Footer"
 
 export default function Layout({ children }) {
   return (
@@ -15,5 +15,5 @@ export default function Layout({ children }) {
       <div className="content">{children}</div>
       <Footer />
     </div>
-  );
+  )
 }

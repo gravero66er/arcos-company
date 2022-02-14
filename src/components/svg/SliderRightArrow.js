@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 
 function SliderRightArrow() {
   return (
@@ -16,7 +16,7 @@ function SliderRightArrow() {
         fill="#4390D8"
       />
     </svg>
-  );
+  )
 }
 
-export default SliderRightArrow;
+export default SliderRightArrow

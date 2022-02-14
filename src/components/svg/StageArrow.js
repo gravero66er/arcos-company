@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 
 function StageArrow(props) {
   return (
@@ -18,7 +18,7 @@ function StageArrow(props) {
         strokeLinejoin="round"
       />
     </svg>
-  );
+  )
 }
 
-export default StageArrow;
+export default StageArrow

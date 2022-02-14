@@ -1,10 +1,10 @@
 // Libraries
-import { StaticImage } from "gatsby-plugin-image";
-import React, { useState } from "react";
-import styled from "styled-components";
+import { StaticImage } from "gatsby-plugin-image"
+import React, { useState } from "react"
+import styled from "styled-components"
 
 // Components
-import StageArrow from "./svg/StageArrow";
+import StageArrow from "./svg/StageArrow"
 
 const Stage = styled.section`
   height: ${({ open }) => (open ? null : "49px")};
@@ -24,10 +24,10 @@ const Stage = styled.section`
   .stage__img {
     opacity: ${({ open }) => (open ? 1 : 0)};
   }
-`;
+`
 
 export default function ThirdHistoryStage({ color, years, title, info }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
   return (
     <Stage
       className="stage"
@@ -52,5 +52,5 @@ export default function ThirdHistoryStage({ color, years, title, info }) {
         placeholder="tracedSVG"
       />
     </Stage>
-  );
+  )
 }

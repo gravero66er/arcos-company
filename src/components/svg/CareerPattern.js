@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 
 function CareerPattern(props) {
   return (
@@ -21,7 +21,7 @@ function CareerPattern(props) {
         fill="#3078BC"
       />
     </svg>
-  );
+  )
 }
 
-export default CareerPattern;
+export default CareerPattern

@@ -17,7 +17,7 @@ export default function Home({ data }) {
 
   return (
     <Layout>
-      <Seo />
+      <Seo title={"Торгово-производственный холдинг ARCOS"} />
       <PromoSlider slides={slides} />
       <section className="container">
         <h1 className="title__h1">Холдинг</h1>

@@ -1,9 +1,9 @@
 // Libraries
-import React from "react";
-import { getImage } from "gatsby-plugin-image";
+import React from "react"
+import { getImage } from "gatsby-plugin-image"
 
 // Components
-import BrandCard from "./BrandCard";
+import BrandCard from "./BrandCard"
 
 function Brands({ brands }) {
   return (
@@ -16,7 +16,7 @@ function Brands({ brands }) {
         />
       ))}
     </section>
-  );
+  )
 }
 
-export default Brands;
+export default Brands

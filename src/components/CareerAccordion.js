@@ -1,11 +1,11 @@
 // Libraries
-import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
-import React, { useState } from "react";
-import styled from "styled-components";
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import React, { useState } from "react"
+import styled from "styled-components"
 
 // Components
-import ActivityArrow from "./svg/ActivityArrow";
+import ActivityArrow from "./svg/ActivityArrow"
 
 const Accordion = styled.div`
   height: ${({ open }) => (open ? null : "40px")};
@@ -24,10 +24,10 @@ const Accordion = styled.div`
       opacity: 1;
     }
   }
-`;
+`
 
 export default function CareerAccordion({ title, description, link }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
 
   return (
     <section className="accordion" onClick={() => setOpen(!open)}>
@@ -46,9 +46,7 @@ export default function CareerAccordion({ title, description, link }) {
             <ActivityArrow />
           </div>
         </div>
-        <p className="accordion__info article article--white">
-          {description}
-        </p>
+        <p className="accordion__info article article--white">{description}</p>
         <Link
           className="accordion__button"
           target="_blank"
@@ -59,5 +57,5 @@ export default function CareerAccordion({ title, description, link }) {
         </Link>
       </Accordion>
     </section>
-  );
+  )
 }

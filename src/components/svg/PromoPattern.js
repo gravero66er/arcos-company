@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 
 function PromoPattern() {
   return (
@@ -22,7 +22,7 @@ function PromoPattern() {
         fill="#3078BC"
       />
     </svg>
-  );
+  )
 }
 
-export default PromoPattern;
+export default PromoPattern

@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from "react"
 
 function BlueLogo(props) {
   return (
@@ -14,7 +14,7 @@ function BlueLogo(props) {
         fill="#4390D8"
       />
     </svg>
-  );
+  )
 }
 
-export default BlueLogo;
+export default BlueLogo

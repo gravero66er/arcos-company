@@ -1,9 +1,9 @@
 // Libraries
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useState } from "react"
+import styled from "styled-components"
 
 // Components
-import Navbar from "./Navbar";
+import Navbar from "./Navbar"
 
 const Burger = styled.div`
   position: ${({ open }) => (open ? "fixed" : "static")};
@@ -19,7 +19,7 @@ const Burger = styled.div`
 
     &:nth-child(2) {
       transform: ${({ open }) =>
-              open ? "translateX(-100%)" : "translateX(0)"};
+        open ? "translateX(-100%)" : "translateX(0)"};
       opacity: ${({ open }) => (open ? "0" : "1")};
     }
 
@@ -27,10 +27,10 @@ const Burger = styled.div`
       transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0deg)")};
     }
   }
-`;
+`
 
 export default function Navigation() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
   return (
     <section>
       <Burger className="burger" open={open} onClick={() => setOpen(!open)}>
@@ -40,5 +40,5 @@ export default function Navigation() {
       </Burger>
       <Navbar open={open} />
     </section>
-  );
+  )
 }

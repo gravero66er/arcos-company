@@ -1,6 +1,6 @@
-import React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
-import { Link } from "gatsby";
+import React from "react"
+import { GatsbyImage } from "gatsby-plugin-image"
+import { Link } from "gatsby"
 
 function BrandCard({ title, description, image }) {
   return (
@@ -17,7 +17,7 @@ function BrandCard({ title, description, image }) {
         Перейти в магазин
       </Link>
     </section>
-  );
+  )
 }
 
-export default BrandCard;
+export default BrandCard
