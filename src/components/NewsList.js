@@ -14,13 +14,8 @@ import SliderRightArrow from "./svg/SliderRightArrow"
 const NewsList = ({ posts }) => {
   const sliderRef = useRef(null)
   const settings = {
-    dots: false,
-    arrows: false,
-    infinite: true,
-    autoplay: false,
-    speed: 500,
     slidesToShow: 2,
-    slidesToScroll: 2,
+    slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 620,
@@ -28,8 +23,7 @@ const NewsList = ({ posts }) => {
           dots: false,
           arrows: false,
           infinite: true,
-          autoplay: true,
-          speed: 500,
+          speed: 800,
           slidesToShow: 1,
           slidesToScroll: 1,
         },
