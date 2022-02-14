@@ -15,7 +15,7 @@ export default function Contacts({ data }) {
   return (
     <Layout>
       <Seo 
-        title={"Торгово-производственный холдинг ARCOS"}
+        title={"Свяжитесь с нами"}
       />
       <ContactsBanner contacts={contacts} />
       <section className="container">
