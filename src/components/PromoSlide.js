@@ -19,7 +19,6 @@ export default function PromoSlide({
       <div className="slide__image slide__image--middle">
         <GatsbyImage image={imageMiddle} alt="image" />
       </div>
-      qwse
       <div className="slide__image slide__image--big">
         <GatsbyImage image={imageBig} alt="image" />
       </div>
