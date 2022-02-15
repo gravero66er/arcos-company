@@ -17,8 +17,8 @@ export default function PromoSlider({ slides }) {
     dots: true,
     arrows: false,
     infinite: true,
-    autoplay: false,
-    speed: 300,
+    fade: true,
+    speed: 800,
     slidesToShow: 1,
     slidesToScroll: 1,
   }
