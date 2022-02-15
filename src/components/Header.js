@@ -17,7 +17,7 @@ export default function Header() {
       <BlueLogo />
       <Navigation />
       <button className="header__button" onClick={() => setModalActive(true)}>
-        Заказать звонок
+        Связаться
       </button>
     </header>
   )
