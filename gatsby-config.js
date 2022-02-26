@@ -6,6 +6,8 @@ if (process.env.NODE_ENV !== "production") {
   })
 }
 
+const siteUrl = process.env.URL || `https://arcos-holding.ru`
+
 module.exports = {
   /* Your site config here */
   plugins: [
@@ -15,6 +17,15 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: "https://arcos-holding.ru/",
+        sitemap: "https://arcos-holding.ru/sitemap/sitemap-index.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -34,7 +45,7 @@ module.exports = {
     title: "Торгово-производственный холдинг ARCOS",
     description:
       "Комплексные решения в области инженерной сантехники, строительства и производства изделий из полимеров.",
-    url: "https://arcos-holding.com",
+    siteUrl: "https://arcos-holding.com",
     image: "",
     author: "Arcos",
   },
