@@ -1,12 +1,12 @@
 import React from "react"
-import Layout from "../components/Layout"
 import { graphql } from "gatsby"
 
 // Components
-import ProductsBanner from "../components/ProductsBanner"
-import Brands from "../components/Brands"
-import Projects from "../components/Projects"
-import CallbackForm from "../components/CallbackForm"
+import Layout from "../components/common/Layout"
+import ProductsBanner from "../components/products/ProductsBanner"
+import Brands from "../components/products/brands/Brands"
+import Projects from "../components/products/projects/Projects"
+import CallbackForm from "../components/common/CallbackForm"
 import { Seo } from "../components/Seo"
 
 export default function Products({ data }) {

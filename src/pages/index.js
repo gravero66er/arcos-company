@@ -3,17 +3,19 @@ import { graphql } from "gatsby"
 import React from "react"
 
 // Components
-import Activity from "../components/Activity"
-import History from "../components/History"
-import Layout from "../components/Layout"
-import NewsList from "../components/NewsList"
-import Philosophy from "../components/Philosophy"
-import PromoSlider from "../components/PromoSlider"
+import Activity from "../components/homepage/activity/Activity"
+import History from "../components/homepage/history/History"
+import Layout from "../components/common/Layout"
+import NewsList from "../components/homepage/news/NewsList"
+import Philosophy from "../components/homepage/Philosophy"
+import PromoSlider from "../components/homepage/promo-slider/PromoSlider"
 import { Seo } from "../components/Seo"
 
 export default function Home({ data }) {
   const slides = data.slides.nodes
   const posts = data.posts.nodes
+
+  console.log(document.location.href);
 
   return (
     <Layout>

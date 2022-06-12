@@ -3,11 +3,11 @@ import React from "react"
 import { graphql } from "gatsby"
 
 // Components
-import Layout from "../components/Layout"
-import CareerBanner from "../components/CareerBanner"
-import Culture from "../components/Culture"
-import Profile from "../components/Profile"
-import Openings from "../components/Openings"
+import Layout from "../components/common/Layout"
+import CareerBanner from "../components/career/CareerBanner"
+import Culture from "../components/career/Culture"
+import Profile from "../components/career/Profile"
+import Openings from "../components/career/openings/Openings"
 import { Seo } from "../components/Seo"
 
 export default function Career({ data }) {

@@ -3,14 +3,15 @@ import { Helmet } from "react-helmet"
 import { StaticQuery, graphql } from "gatsby"
 
 export const Seo = ({ title, description, keywords, siteUrl, author, image }) => {
+  console.log(siteUrl);
+  console.log(description)
   return (
     <StaticQuery
       query={detailsQuery}
       render={data => {
         const metaTitle = title || data.site.siteMetadata.title
-        const metaDescription =
-          description || data.site.siteMetadata.description
-        const metaUrl = siteUrl || data.site.siteMetadata.url
+        const metaDescription = description || data.site.siteMetadata.description
+        const metaUrl = siteUrl || data.site.siteMetadata.siteUrl
         const metaImage = image || data.site.siteMetadata.image
         const metaAuthor = author || data.site.siteMetadata.author
         const metaKeywords = keywords || [

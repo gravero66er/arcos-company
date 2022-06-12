@@ -45,7 +45,7 @@ module.exports = {
     title: "Торгово-производственный холдинг ARCOS",
     description:
       "Комплексные решения в области инженерной сантехники, строительства и производства изделий из полимеров.",
-    siteUrl: "https://arcos-holding.com",
+    siteUrl: "https://arcos-holding.ru",
     image: "",
     author: "Arcos",
   },

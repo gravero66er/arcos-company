@@ -3,14 +3,15 @@ import React from "react"
 import { graphql } from "gatsby"
 
 // Components
-import Layout from "../components/Layout"
-import ContactsBanner from "../components/ContactsBanner"
-import MessageForm from "../components/MessageForm"
-import ContactsInfo from "../components/ContactsInfo"
+import Layout from "../components/common/Layout"
+import ContactsBanner from "../components/contacts/ContactsBanner"
+import MessageForm from "../components/common/MessageForm"
+import ContactsInfo from "../components/contacts/ContactsInfo"
 import { Seo } from "../components/Seo"
 
 export default function Contacts({ data }) {
   const contacts = data.contacts.nodes
+  console.log(document.location.href);
 
   return (
     <Layout>
