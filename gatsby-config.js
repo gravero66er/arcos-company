@@ -1,3 +1,4 @@
+/* eslint-disable implicit-arrow-linebreak */
 const dotenv = require('dotenv')
 
 if (process.env.NODE_ENV !== 'production') {
@@ -29,11 +30,6 @@ module.exports = {
       options: {
         query: `
         {
-          site {
-            siteMetadata {
-              siteUrl
-            }
-          }
           allSitePage {
             nodes {
               path
@@ -41,14 +37,18 @@ module.exports = {
           }
         }
       `,
-        serialize: ({ site, allSitePages }) =>
-          allSitePages.nodes.map(() => {
-            return {
-              url: `${site.siteMetadata.siteUrl}`,
-              changefreq: 'weekly',
-              priority: 0.5,
-            }
-          }),
+        resolveSiteUrl: () => siteUrl,
+        resolvePages: ({ allSitePage: { nodes: allPages } }) => {
+          return allPages.map(page => {
+            return { ...page }
+          })
+        },
+        serialize: ({ path, modifiedGmt }) => {
+          return {
+            url: path,
+            lastmod: modifiedGmt,
+          }
+        },
       },
     },
     {
