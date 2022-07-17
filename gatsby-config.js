@@ -20,7 +20,7 @@ module.exports = {
   plugins: [
     'gatsby-transformer-remark',
     'gatsby-plugin-sass',
-    'atsby-plugin-styled-components',
+    'gatsby-plugin-styled-components',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     'gatsby-plugin-image',
