@@ -1,3 +1,4 @@
+/* eslint-disable implicit-arrow-linebreak */
 // Libraries
 import React, { useRef } from 'react'
 import Slider from 'react-slick'
@@ -62,20 +63,24 @@ function Openings({ openings }) {
           ))}
         </Slider>
         <div className="slider__buttons">
-          <span
+          <div
             className="slider__prev"
             onClick={() => sliderRef.current.slickPrev()}
-            onKeyDown={this.handleClick}
+            onKeyDown={() => sliderRef.current.slickPrev()}
+            role="button"
+            tabIndex="0"
           >
             <SliderLeftArrow />
-          </span>
-          <span
+          </div>
+          <div
             className="slider__next"
             onClick={() => sliderRef.current.slickNext()}
-            onKeyDown={this.handleClick}
+            onKeyDown={() => sliderRef.current.slickPrev()}
+            role="button"
+            tabIndex="0"
           >
             <SliderRightArrow />
-          </span>
+          </div>
         </div>
       </section>
     </section>

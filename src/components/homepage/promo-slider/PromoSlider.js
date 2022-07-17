@@ -1,3 +1,4 @@
+/* eslint-disable implicit-arrow-linebreak */
 // Libraries
 import React, { useRef } from 'react'
 import 'slick-carousel/slick/slick.css'
@@ -38,18 +39,24 @@ export default function PromoSlider({ slides }) {
         ))}
       </Slider>
       <div className="slider__buttons">
-        <span
+        <div
           className="slider__prev"
           onClick={() => sliderRef.current.slickPrev()}
+          onKeyPress={() => sliderRef.current.slickPrev()}
+          role="button"
+          tabIndex="0"
         >
           <SliderLeftArrow />
-        </span>
-        <span
+        </div>
+        <div
           className="slider__next"
           onClick={() => sliderRef.current.slickNext()}
+          onKeyPress={() => sliderRef.current.slickNext()}
+          role="button"
+          tabIndex="0"
         >
           <SliderRightArrow />
-        </span>
+        </div>
       </div>
       <div className="promo__pattern">
         <PromoPattern />

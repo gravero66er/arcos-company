@@ -1,3 +1,4 @@
+/* eslint-disable implicit-arrow-linebreak */
 // Libraries
 import React, { useEffect, useState, useRef } from 'react'
 import emailjs from 'emailjs-com'
@@ -51,7 +52,9 @@ export default function CallbackForm({ setActive }) {
           name="name"
         />
         <div className="callback__buttons">
-          <button className="callback__button">Отправить</button>
+          <button className="callback__button" type="submit">
+            Отправить
+          </button>
           <button
             type="button"
             className="callback__button callback__button--close"

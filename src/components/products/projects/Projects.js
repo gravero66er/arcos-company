@@ -1,3 +1,4 @@
+/* eslint-disable implicit-arrow-linebreak */
 // Libraries
 import React, { useRef } from 'react'
 import Slider from 'react-slick'
@@ -50,24 +51,30 @@ function Projects({ projects }) {
       </div>
       <section className="projects__list">
         <Slider {...settings} ref={sliderRef}>
-          {projects.map((project, index) => {
+          {projects.map(project => {
             const image = getImage(project.image)
-            return <Project project={project} image={image} key={index} />
+            return <Project project={project} image={image} key={project.id} />
           })}
         </Slider>
         <div className="slider__buttons">
-          <span
+          <div
             className="slider__prev"
             onClick={() => sliderRef.current.slickPrev()}
+            onKeyDown={() => sliderRef.current.slickPrev()}
+            role="button"
+            tabIndex="0"
           >
             <SliderLeftArrow />
-          </span>
-          <span
+          </div>
+          <div
             className="slider__next"
             onClick={() => sliderRef.current.slickNext()}
+            onKeyDown={() => sliderRef.current.slickPrev()}
+            role="button"
+            tabIndex="0"
           >
             <SliderRightArrow />
-          </span>
+          </div>
         </div>
       </section>
     </section>

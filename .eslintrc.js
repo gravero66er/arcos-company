@@ -22,6 +22,18 @@ module.exports = {
     },
   },
   rules: {
+    'implicit-arrow-linebreak': ['error', 'below'],
+    'no-confusing-arrow': ['warn', { onlyOneSimpleParam: true }],
+    'comma-dangle': [
+      'warn',
+      {
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        imports: 'always-multiline',
+        exports: 'always-multiline',
+        functions: 'never',
+      },
+    ],
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'react/jsx-props-no-spreading': 'off',
     'linebreak-style': 'off', // Don't play nicely with Windows.

@@ -1,3 +1,4 @@
+/* eslint-disable implicit-arrow-linebreak */
 // Libraries
 import { graphql, Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
@@ -5,8 +6,8 @@ import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import React from 'react'
 
 // Components
-import Layout from '../components/common/Layout'
-import { Seo } from '../components/Seo'
+import Layout from '../components/Common/Layout'
+import Seo from '../components/Seo'
 
 export default function NewsSinglePage({ data }) {
   const post = data.contentfulPost

@@ -1,10 +1,31 @@
+/* eslint-disable indent */
+/* eslint-disable operator-linebreak */
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-export function Seo({ title, description, keywords, siteUrl, author, image }) {
-  console.log(siteUrl)
-  console.log(description)
+const detailsQuery = graphql`
+  query DefaultSeoQuery {
+    site {
+      siteMetadata {
+        title
+        description
+        siteUrl
+        author
+        image
+      }
+    }
+  }
+`
+
+export default function Seo({
+  title,
+  description,
+  keywords,
+  siteUrl,
+  author,
+  image,
+}) {
   return (
     <StaticQuery
       query={detailsQuery}
@@ -67,17 +88,3 @@ export function Seo({ title, description, keywords, siteUrl, author, image }) {
     />
   )
 }
-
-const detailsQuery = graphql`
-  query DefaultSeoQuery {
-    site {
-      siteMetadata {
-        title
-        description
-        siteUrl
-        author
-        image
-      }
-    }
-  }
-`

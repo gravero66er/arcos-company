@@ -1,3 +1,4 @@
+/* eslint-disable implicit-arrow-linebreak */
 // Libraries
 import React from 'react'
 import { Link } from 'gatsby'
@@ -21,8 +22,8 @@ export default function NewsCard({
           </p>
         </section>
         <p className="tags__list">
-          {badges.map((badge, index) => (
-            <span className="tag article article--tip" key={index}>
+          {badges.map(badge => (
+            <span className="tag article article--tip" key={badge.id}>
               {badge.content}
             </span>
           ))}

@@ -1,3 +1,4 @@
+/* eslint-disable implicit-arrow-linebreak */
 // Libraries
 import React, { useRef } from 'react'
 import Slider from 'react-slick'
@@ -63,18 +64,24 @@ function NewsList({ posts }) {
         </Slider>
       </div>
       <div className="slider__buttons">
-        <span
+        <div
           className="slider__prev"
           onClick={() => sliderRef.current.slickPrev()}
+          onKeyPress={() => sliderRef.current.slickPrev()}
+          role="button"
+          tabIndex="0"
         >
           <SliderLeftArrow />
-        </span>
-        <span
+        </div>
+        <div
           className="slider__next"
           onClick={() => sliderRef.current.slickNext()}
+          onKeyPress={() => sliderRef.current.slickNext()}
+          role="button"
+          tabIndex="0"
         >
           <SliderRightArrow />
-        </span>
+        </div>
       </div>
     </section>
   )

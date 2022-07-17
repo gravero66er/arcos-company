@@ -1,3 +1,4 @@
+/* eslint-disable implicit-arrow-linebreak */
 // Libraries
 import React from 'react'
 import { getImage } from 'gatsby-plugin-image'
@@ -8,9 +9,9 @@ import BrandCard from './BrandCard'
 function Brands({ brands }) {
   return (
     <section className="brands__list">
-      {brands.map((brand, index) => (
+      {brands.map(brand => (
         <BrandCard
-          key={index}
+          key={brand.id}
           title={brand.title}
           description={brand.description}
           image={getImage(brand.image)}

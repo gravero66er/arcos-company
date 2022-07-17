@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-function StageArrow(props) {
+function StageArrow({ color, ...props }) {
   return (
     <svg
       width="14"

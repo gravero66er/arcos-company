@@ -1,3 +1,4 @@
+/* eslint-disable implicit-arrow-linebreak */
 // Libraries
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
@@ -30,7 +31,13 @@ export default function StorageAccordion({ title, description, link }) {
   const [open, setOpen] = useState(false)
 
   return (
-    <section className="accordion" onClick={() => setOpen(!open)}>
+    <section
+      className="accordion"
+      onClick={() => setOpen(!open)}
+      onKeyPress={() => setOpen(!open)}
+      role="button"
+      tabIndex="0"
+    >
       <StaticImage
         className="accordion__img"
         src="../../../images/storage.jpeg"

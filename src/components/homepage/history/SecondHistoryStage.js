@@ -1,3 +1,4 @@
+/* eslint-disable implicit-arrow-linebreak */
 // Libraries
 import { StaticImage } from 'gatsby-plugin-image'
 import React, { useState } from 'react'

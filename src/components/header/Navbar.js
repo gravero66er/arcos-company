@@ -1,12 +1,13 @@
+/* eslint-disable implicit-arrow-linebreak */
 // Libraries
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 // Components
-import SocialIcons from '../common/SocialIcons'
-import Modal from '../common/Modal'
-import CallbackForm from '../common/CallbackForm'
+import SocialIcons from '../Common/SocialIcons'
+import Modal from '../Common/Modal'
+import CallbackForm from '../Common/CallbackForm'
 import NavbarPattern from '../svg/NavbarPattern'
 
 const Nav = styled.nav`
@@ -37,7 +38,12 @@ export default function Navbar({ open }) {
             Контакты
           </Link>
         </div>
-        <button className="navbar__button" onClick={() => setModalActive(true)}>
+        <button
+          className="navbar__button"
+          onClick={() => setModalActive(true)}
+          onKeyPress={() => setModalActive(true)}
+          type="button"
+        >
           Связаться
         </button>
         <SocialIcons />

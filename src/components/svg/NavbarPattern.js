@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-function NavbarPattern(props) {
+function NavbarPattern() {
   return (
     <svg
       className="navbar__patterns"

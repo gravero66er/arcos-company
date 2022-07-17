@@ -1,4 +1,4 @@
-@import "settings";
+@import 'settings';
 
 .news {
   .slider__buttons {
@@ -38,15 +38,9 @@
     display: none;
     @media (min-width: 1024px) {
       display: flex;
-      justify-content: center;
-      padding: 20px;
-      button:not(:last-child) {
-        margin-right: 10px;
-      }
-      @media (min-width: 1024px) {
-        justify-content: flex-end;
-        padding: 20px 80px;
-      }
+      justify-content: flex-end;
+      padding: 20px 80px;
+      gap: 10px;
     }
   }
 
@@ -91,7 +85,7 @@
     left: 0;
     width: 6px;
     height: 6px;
-    content: "";
+    content: '';
     text-align: center;
     opacity: 1;
     color: black;
@@ -205,7 +199,7 @@
     left: 0;
     width: 6px;
     height: 6px;
-    content: "";
+    content: '';
     text-align: center;
     opacity: 1;
     color: black;

@@ -1,3 +1,4 @@
+/* eslint-disable implicit-arrow-linebreak */
 // Libraries
 import React, { useEffect, useRef, useState } from 'react'
 import emailjs from 'emailjs-com'
@@ -18,21 +19,12 @@ function MessageForm() {
   }, [sent])
 
   function sendMessage() {
-    emailjs
-      .sendForm(
-        'service_64fuur9',
-        'template_pjj0gyi',
-        form.current,
-        'user_1zGlqhenQXA3jAkEzGerS'
-      )
-      .then(
-        result => {
-          console.log(result.text)
-        },
-        error => {
-          console.log(error.text)
-        }
-      )
+    emailjs.sendForm(
+      'service_64fuur9',
+      'template_pjj0gyi',
+      form.current,
+      'user_1zGlqhenQXA3jAkEzGerS'
+    )
   }
 
   return (
@@ -73,7 +65,9 @@ function MessageForm() {
           name="message"
         />
         <div className="message__buttons">
-          <button className="message__button">Отправить вопрос</button>
+          <button className="message__button" type="submit">
+            Отправить вопрос
+          </button>
           <button
             className="message__button message__button--call"
             type="button"

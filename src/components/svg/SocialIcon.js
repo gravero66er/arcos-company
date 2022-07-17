@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-function Icon(props) {
+function Icon({ path, ...props }) {
   return (
     <svg
       width={30}
@@ -10,7 +10,7 @@ function Icon(props) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path d={props.path} fill="#fff" />
+      <path d={{ path }} fill="#fff" />
     </svg>
   )
 }
