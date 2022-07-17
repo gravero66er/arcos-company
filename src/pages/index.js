@@ -64,6 +64,7 @@ export const query = graphql`
       nodes {
         badges {
           content
+          id
         }
         title
         description {
