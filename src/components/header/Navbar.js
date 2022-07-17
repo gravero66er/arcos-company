@@ -5,9 +5,9 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 // Components
-import SocialIcons from '../Common/SocialIcons'
-import Modal from '../Common/Modal'
-import CallbackForm from '../Common/CallbackForm'
+import SocialIcons from '../common/SocialIcons'
+import Modal from '../common/Modal'
+import CallbackForm from '../common/CallbackForm'
 import NavbarPattern from '../svg/NavbarPattern'
 
 const Nav = styled.nav`

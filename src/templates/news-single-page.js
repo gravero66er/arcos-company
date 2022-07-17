@@ -6,7 +6,7 @@ import { renderRichText } from 'gatsby-source-contentful/rich-text'
 import React from 'react'
 
 // Components
-import Layout from '../components/Common/Layout'
+import Layout from '../components/common/Layout'
 import Seo from '../components/Seo'
 
 export default function NewsSinglePage({ data }) {

@@ -3,10 +3,10 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 // Components
-import Layout from '../components/Common/Layout'
-import CareerBanner from '../components/Career/CareerBanner'
-import Culture from '../components/Career/Culture'
-import Openings from '../components/Career/Openings/Openings'
+import Layout from '../components/common/Layout'
+import CareerBanner from '../components/career/CareerBanner'
+import Culture from '../components/career/Culture'
+import Openings from '../components/career/openings/Openings'
 import Seo from '../components/Seo'
 
 export default function Career({ data }) {

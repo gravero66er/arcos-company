@@ -5,7 +5,7 @@ import React from 'react'
 import FooterAccordion from './FooterAcordion'
 import FooterLink from './FooterLink'
 import WhiteLogo from '../svg/WhiteLogo'
-import SocialIcons from '../Common/SocialIcons'
+import SocialIcons from '../common/SocialIcons'
 
 export default function Footer() {
   return (
