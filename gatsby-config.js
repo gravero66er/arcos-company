@@ -55,7 +55,7 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://arcos-holding.ru/',
-        sitemap: 'https://arcos-holding.ru/sitemap/sitemap-index.xml',
+        sitemap: 'https://arcos-holding.ru/sitemap/sitemap-0.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
