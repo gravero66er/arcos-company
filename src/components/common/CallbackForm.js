@@ -1,6 +1,6 @@
 // Libraries
-import React, { useEffect, useState, useRef } from "react"
-import emailjs from "emailjs-com"
+import React, { useEffect, useState, useRef } from 'react'
+import emailjs from 'emailjs-com'
 
 export default function CallbackForm({ setActive }) {
   const [sent, setSent] = useState(false)
@@ -13,21 +13,12 @@ export default function CallbackForm({ setActive }) {
   }, [sent])
 
   function sendEmail() {
-    emailjs
-      .sendForm(
-        "service_64fuur9",
-        "template_glp91vd",
-        form.current,
-        "user_1zGlqhenQXA3jAkEzGerS"
-      )
-      .then(
-        result => {
-          console.log(result.text)
-        },
-        error => {
-          console.log(error.text)
-        }
-      )
+    emailjs.sendForm(
+      'service_64fuur9',
+      'template_glp91vd',
+      form.current,
+      'user_1zGlqhenQXA3jAkEzGerS'
+    )
   }
 
   return (
@@ -72,8 +63,8 @@ export default function CallbackForm({ setActive }) {
         <p
           className={
             sent
-              ? "callback__notify article active"
-              : "callback__notify article"
+              ? 'callback__notify article active'
+              : 'callback__notify article'
           }
         >
           Ваша заявка отправлена!

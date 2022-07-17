@@ -1,15 +1,15 @@
 // Libraries
-import React, { useRef } from "react"
-import Slider from "react-slick"
-import { getImage } from "gatsby-plugin-image"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
+import React, { useRef } from 'react'
+import Slider from 'react-slick'
+import { getImage } from 'gatsby-plugin-image'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 // Components
-import Project from "./Project"
-import TitleIcon from "../../svg/TitleIcon"
-import SliderLeftArrow from "../../svg/SliderLeftArrow"
-import SliderRightArrow from "../../svg/SliderRightArrow"
+import Project from './Project'
+import TitleIcon from '../../svg/TitleIcon'
+import SliderLeftArrow from '../../svg/SliderLeftArrow'
+import SliderRightArrow from '../../svg/SliderRightArrow'
 
 function Projects({ projects }) {
   const sliderRef = useRef(null)
@@ -37,11 +37,7 @@ function Projects({ projects }) {
         <div className="title__wrapper">
           <h2 className="title__h2">Проекты</h2>
           <div className="title__icon">
-            <TitleIcon
-              path={
-                "M22 21H2V11a2 2 0 012-2h4V4a2 2 0 012-2h4a2 2 0 012 2v3h4a2 2 0 012 2v12zM16 9v10h4V9h-4zm-6-5v15h4V4h-4zm-6 7v8h4v-8H4z"
-              }
-            />
+            <TitleIcon path="M22 21H2V11a2 2 0 012-2h4V4a2 2 0 012-2h4a2 2 0 012 2v3h4a2 2 0 012 2v12zM16 9v10h4V9h-4zm-6-5v15h4V4h-4zm-6 7v8h4v-8H4z" />
           </div>
         </div>
         <p className="article article--half">
@@ -54,9 +50,9 @@ function Projects({ projects }) {
       </div>
       <section className="projects__list">
         <Slider {...settings} ref={sliderRef}>
-          {projects.map(project => {
+          {projects.map((project, index) => {
             const image = getImage(project.image)
-            return <Project project={project} image={image} />
+            return <Project project={project} image={image} key={index} />
           })}
         </Slider>
         <div className="slider__buttons">

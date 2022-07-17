@@ -1,6 +1,6 @@
-import React from "react"
-import { Link } from "gatsby"
-import { renderRichText } from "gatsby-source-contentful/rich-text"
+import React from 'react'
+import { Link } from 'gatsby'
+import { renderRichText } from 'gatsby-source-contentful/rich-text'
 
 function Vacancy({ vacancy: { position, description, skills, salary, link } }) {
   return (

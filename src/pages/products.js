@@ -1,13 +1,13 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 
 // Components
-import Layout from "../components/common/Layout"
-import ProductsBanner from "../components/products/ProductsBanner"
-import Brands from "../components/products/brands/Brands"
-import Projects from "../components/products/projects/Projects"
-import CallbackForm from "../components/common/CallbackForm"
-import { Seo } from "../components/Seo"
+import Layout from '../components/common/Layout'
+import ProductsBanner from '../components/products/ProductsBanner'
+import Brands from '../components/products/brands/Brands'
+import Projects from '../components/products/projects/Projects'
+import CallbackForm from '../components/common/CallbackForm'
+import { Seo } from '../components/Seo'
 
 export default function Products({ data }) {
   const products = data.products.nodes
@@ -17,19 +17,17 @@ export default function Products({ data }) {
   return (
     <Layout>
       <Seo
-        title={"Инженерная сантехника"}
-        description={
-          "Многообразие брендов для самых разнообразных инженерных решений: DAB, Фарфор, Профсан, LD, Buderus, Con-pipe, Sanha, Hoft."
-        }
+        title="Инженерная сантехника"
+        description="Многообразие брендов для самых разнообразных инженерных решений: DAB, Фарфор, Профсан, LD, Buderus, Con-pipe, Sanha, Hoft."
         keywords={[
-          "DAB",
-          "Фарфор",
-          "Профсан",
-          "LD",
-          "Buderus",
-          "Con-pipe",
-          "Sanha",
-          "Hoft",
+          'DAB',
+          'Фарфор',
+          'Профсан',
+          'LD',
+          'Buderus',
+          'Con-pipe',
+          'Sanha',
+          'Hoft',
         ]}
       />
       <ProductsBanner products={products} />

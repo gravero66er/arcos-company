@@ -1,10 +1,10 @@
 // Libraries
-import React from "react"
-import "../../styles/global.scss"
+import React from 'react'
+import '../../styles/global.scss'
 
 // Components
-import Header from "../header/Header"
-import Footer from "../footer/Footer"
+import Header from '../header/Header'
+import Footer from '../footer/Footer'
 
 export default function Layout({ children }) {
   return (

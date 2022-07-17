@@ -1,9 +1,9 @@
 // Libraries
-import React from "react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import React from 'react'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 // Components
-import ContactsPattern from "../svg/ContactsPattern"
+import ContactsPattern from '../svg/ContactsPattern'
 
 function ContactsBanner({ contacts }) {
   const imageSmall = getImage(contacts[0].imageSmall)

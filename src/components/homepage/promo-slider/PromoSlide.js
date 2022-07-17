@@ -1,8 +1,8 @@
 // Libraries
-import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
-import { Link } from "gatsby"
-import { renderRichText } from "gatsby-source-contentful/rich-text"
+import React from 'react'
+import { GatsbyImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
+import { renderRichText } from 'gatsby-source-contentful/rich-text'
 
 export default function PromoSlide({
   slide: { title, description, link },

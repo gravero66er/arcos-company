@@ -1,21 +1,21 @@
 // Libraries
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
-import React, { useState } from "react"
-import styled from "styled-components"
+import { Link } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
+import React, { useState } from 'react'
+import styled from 'styled-components'
 
 // Components
-import ActivityArrow from "../../svg/ActivityArrow"
+import ActivityArrow from '../../svg/ActivityArrow'
 
 const Accordion = styled.div`
-  height: ${({ open }) => (open ? null : "40px")};
+  height: ${({ open }) => (open ? null : '40px')};
 
   .accordion__info {
     opacity: ${({ open }) => (open ? 1 : 0)};
   }
 
   .accordion__arrow {
-    transform: ${({ open }) => (open ? "rotate(90deg)" : "0")};
+    transform: ${({ open }) => (open ? 'rotate(90deg)' : '0')};
   }
 
   @media (min-width: 1024px) {

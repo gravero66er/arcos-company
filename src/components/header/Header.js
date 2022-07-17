@@ -1,11 +1,11 @@
 // Libraries
-import React, { useState } from "react"
+import React, { useState } from 'react'
 
 // Components
-import Navigation from "./Navigation"
-import BlueLogo from "../svg/BlueLogo"
-import Modal from "../common/Modal"
-import CallbackForm from "../common/CallbackForm"
+import Navigation from './Navigation'
+import BlueLogo from '../svg/BlueLogo'
+import Modal from '../common/Modal'
+import CallbackForm from '../common/CallbackForm'
 
 export default function Header() {
   const [modalActive, setModalActive] = useState(false)

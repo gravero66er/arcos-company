@@ -1,22 +1,22 @@
 // Libraries
-import { graphql } from "gatsby"
-import React from "react"
+import { graphql } from 'gatsby'
+import React from 'react'
 
 // Components
-import Activity from "../components/homepage/activity/Activity"
-import History from "../components/homepage/history/History"
-import Layout from "../components/common/Layout"
-import NewsList from "../components/homepage/news/NewsList"
-import Philosophy from "../components/homepage/Philosophy"
-import PromoSlider from "../components/homepage/promo-slider/PromoSlider"
-import { Seo } from "../components/Seo"
+import Activity from '../components/homepage/activity/Activity'
+import History from '../components/homepage/history/History'
+import Layout from '../components/common/Layout'
+import NewsList from '../components/homepage/news/NewsList'
+import Philosophy from '../components/homepage/Philosophy'
+import PromoSlider from '../components/homepage/promo-slider/PromoSlider'
+import { Seo } from '../components/Seo'
 
 export default function Home({ data }) {
   const slides = data.slides.nodes
   const posts = data.posts.nodes
   return (
     <Layout>
-      <Seo title={"Торгово-производственный холдинг ARCOS"} />
+      <Seo title="Торгово-производственный холдинг ARCOS" />
       <PromoSlider slides={slides} />
       <section className="container">
         <h1 className="title__h1">Холдинг</h1>

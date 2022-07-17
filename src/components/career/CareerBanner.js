@@ -1,9 +1,9 @@
 // Libraries
-import React from "react"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import React from 'react'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 // Components
-import CareerPattern from "../svg/CareerPattern"
+import CareerPattern from '../svg/CareerPattern'
 
 function CareerBanner({ career }) {
   const imageSmall = getImage(career[0].imageSmall)

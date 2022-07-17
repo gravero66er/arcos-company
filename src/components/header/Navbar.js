@@ -1,17 +1,16 @@
 // Libraries
-import React, { useState } from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
-import { StaticImage } from "gatsby-plugin-image"
+import React, { useState } from 'react'
+import { Link } from 'gatsby'
+import styled from 'styled-components'
 
 // Components
-import SocialIcons from "../common/SocialIcons"
-import Modal from "../common/Modal"
-import CallbackForm from "../common/CallbackForm"
-import NavbarPattern from "../svg/NavbarPattern"
+import SocialIcons from '../common/SocialIcons'
+import Modal from '../common/Modal'
+import CallbackForm from '../common/CallbackForm'
+import NavbarPattern from '../svg/NavbarPattern'
 
 const Nav = styled.nav`
-  right: ${({ open }) => (open ? "0" : "-100%")};
+  right: ${({ open }) => (open ? '0' : '-100%')};
 `
 export default function Navbar({ open }) {
   const [modalActive, setModalActive] = useState(false)

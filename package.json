@@ -8,12 +8,22 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "lint": "eslint --debug src/",
+    "lint:write": "eslint --debug src/ --fix",
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "reactide-server": "webpack-dev-server --config reactide.config.js --mode development --hot",
     "postinstall": "rm -rf node_modules/gatsby-plugin-gatsby-cloud && echo see https://github.com/gatsbyjs/gatsby/issues/33042"
+  },
+  "eslintConfig": {
+    "extends": [
+      "wesbos"
+    ],
+    "rules": {
+      "react/prop-types": 0
+    }
   },
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.2",
@@ -46,14 +56,31 @@
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.40",
     "@babel/core": "^7.0.0-beta.40",
+    "@babel/eslint-parser": "^7.18.2",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/plugin-transform-runtime": "^7.4.4",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0-beta.0",
+    "babel-eslint": "^7.5.4",
     "babel-loader": "^8.0.0-beta.0",
+    "cross-env": "^7.0.3",
     "css-loader": "^2.1.1",
+    "eslint": "^8.20.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-config-wesbos": "^3.0.2",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "esm": "^3.2.25",
     "file-loader": "^4.0.0",
     "html-webpack-plugin": "^3.2.0",
+    "prettier": "^2.7.1",
     "style-loader": "^0.23.1",
     "url-loader": "^2.0.0",
     "webpack": "^4.33.0",

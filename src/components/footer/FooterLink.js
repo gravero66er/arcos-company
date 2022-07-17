@@ -1,6 +1,6 @@
 // Libraries
-import { Link } from "gatsby"
-import React from "react"
+import { Link } from 'gatsby'
+import React from 'react'
 
 export default function FooterLink({ title, link }) {
   return (

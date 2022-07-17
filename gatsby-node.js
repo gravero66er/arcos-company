@@ -1,4 +1,4 @@
-const path = require("path")
+const path = require('path')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { data } = await graphql(`
@@ -14,7 +14,7 @@ exports.createPages = async ({ graphql, actions }) => {
   data.allContentfulPost.nodes.forEach(node => {
     actions.createPage({
       path: node.slug,
-      component: path.resolve("./src/templates/news-single-page.js"),
+      component: path.resolve('./src/templates/news-single-page.js'),
       context: { slug: node.slug },
     })
   })

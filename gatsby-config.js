@@ -1,6 +1,6 @@
-const dotenv = require("dotenv")
+const dotenv = require('dotenv')
 
-if (process.env.NODE_ENV !== "production") {
+if (process.env.NODE_ENV !== 'production') {
   dotenv.config({
     path: `.env.${process.env.NODE_ENV}`,
   })
@@ -9,7 +9,14 @@ if (process.env.NODE_ENV !== "production") {
 const siteUrl = process.env.URL || `https://arcos-holding.ru`
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: 'Торгово-производственный холдинг ARCOS',
+    description:
+      'Комплексные решения в области инженерной сантехники, строительства и производства изделий из полимеров.',
+    siteUrl: siteUrl,
+    image: '',
+    author: 'Arcos',
+  },
   plugins: [
     `gatsby-transformer-remark`,
     `gatsby-plugin-sass`,
@@ -17,13 +24,40 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-image`,
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        query: `
+        {
+          site {
+            siteMetadata {
+              siteUrl
+            }
+          }
+          allSitePage {
+            nodes {
+              path
+            }
+          }
+        }
+      `,
+        resolveSiteUrl: () => this.siteMetadata.siteUrl,
+        serialize: ({ site, allSitePages }) =>
+          allSitePages.nodes.map(node => {
+            return {
+              url: `${site.siteMetadata.siteUrl}`,
+              changefreq: `weekly`,
+              priority: 0.5,
+            }
+          }),
+      },
+    },
     {
       resolve: `gatsby-plugin-robots-txt`,
       options: {
-        host: "https://arcos-holding.ru/",
-        sitemap: "https://arcos-holding.ru/sitemap/sitemap-index.xml",
-        policy: [{ userAgent: "*", allow: "/" }],
+        host: 'https://arcos-holding.ru/',
+        sitemap: 'https://arcos-holding.ru/sitemap/sitemap-index.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
       },
     },
     {
@@ -41,12 +75,4 @@ module.exports = {
       },
     },
   ],
-  siteMetadata: {
-    title: "Торгово-производственный холдинг ARCOS",
-    description:
-      "Комплексные решения в области инженерной сантехники, строительства и производства изделий из полимеров.",
-    siteUrl: "https://arcos-holding.ru",
-    image: "",
-    author: "Arcos",
-  },
 }

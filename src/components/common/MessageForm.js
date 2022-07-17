@@ -1,10 +1,10 @@
 // Libraries
-import React, { useEffect, useRef, useState } from "react"
-import emailjs from "emailjs-com"
+import React, { useEffect, useRef, useState } from 'react'
+import emailjs from 'emailjs-com'
 
 // Components
-import Modal from "./Modal"
-import CallbackForm from "./CallbackForm"
+import Modal from './Modal'
+import CallbackForm from './CallbackForm'
 
 function MessageForm() {
   const [modalActive, setModalActive] = useState(false)
@@ -20,10 +20,10 @@ function MessageForm() {
   function sendMessage() {
     emailjs
       .sendForm(
-        "service_64fuur9",
-        "template_pjj0gyi",
+        'service_64fuur9',
+        'template_pjj0gyi',
         form.current,
-        "user_1zGlqhenQXA3jAkEzGerS"
+        'user_1zGlqhenQXA3jAkEzGerS'
       )
       .then(
         result => {
@@ -85,7 +85,7 @@ function MessageForm() {
       </form>
       <p
         className={
-          sent ? "callback__notify article active" : "callback__notify article"
+          sent ? 'callback__notify article active' : 'callback__notify article'
         }
       >
         Ваше сообщение отправлено!

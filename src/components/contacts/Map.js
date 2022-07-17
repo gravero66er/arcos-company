@@ -1,5 +1,5 @@
-import React from "react"
-import { YMaps, Map } from "react-yandex-maps"
+import React from 'react'
+import { YMaps, Map } from 'react-yandex-maps'
 
 function YaMap() {
   return (

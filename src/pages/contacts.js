@@ -1,21 +1,19 @@
 // Libraries
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 
 // Components
-import Layout from "../components/common/Layout"
-import ContactsBanner from "../components/contacts/ContactsBanner"
-import MessageForm from "../components/common/MessageForm"
-import ContactsInfo from "../components/contacts/ContactsInfo"
-import { Seo } from "../components/Seo"
+import Layout from '../components/common/Layout'
+import ContactsBanner from '../components/contacts/ContactsBanner'
+import MessageForm from '../components/common/MessageForm'
+import ContactsInfo from '../components/contacts/ContactsInfo'
+import { Seo } from '../components/Seo'
 
 export default function Contacts({ data }) {
   const contacts = data.contacts.nodes
   return (
     <Layout>
-      <Seo 
-        title={"Свяжитесь с нами"}
-      />
+      <Seo title="Свяжитесь с нами" />
       <ContactsBanner contacts={contacts} />
       <section className="container">
         <h1 className="title__h1">Контакты</h1>

@@ -1,14 +1,13 @@
 // Libraries
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 
 // Components
-import Layout from "../components/common/Layout"
-import CareerBanner from "../components/career/CareerBanner"
-import Culture from "../components/career/Culture"
-import Profile from "../components/career/Profile"
-import Openings from "../components/career/openings/Openings"
-import { Seo } from "../components/Seo"
+import Layout from '../components/common/Layout'
+import CareerBanner from '../components/career/CareerBanner'
+import Culture from '../components/career/Culture'
+import Openings from '../components/career/openings/Openings'
+import { Seo } from '../components/Seo'
 
 export default function Career({ data }) {
   const career = data.career.nodes
@@ -16,16 +15,14 @@ export default function Career({ data }) {
   return (
     <Layout>
       <Seo
-        title={"Карьера в ARCOS"}
-        description={
-          "Возможность построить карьеру в большой и надежной компании."
-        }
+        title="Карьера в ARCOS"
+        description="Возможность построить карьеру в большой и надежной компании."
         keywords={[
-          "Карьера",
-          "Вакансии",
-          "Работа инженером",
-          "Профессиональный рост",
-          "Работа в строительстве",
+          'Карьера',
+          'Вакансии',
+          'Работа инженером',
+          'Профессиональный рост',
+          'Работа в строительстве',
         ]}
       />
       <CareerBanner career={career} />

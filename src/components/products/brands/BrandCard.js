@@ -1,6 +1,6 @@
-import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
-import { Link } from "gatsby"
+import React from 'react'
+import { GatsbyImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
 
 function BrandCard({ title, description, image }) {
   return (
@@ -12,7 +12,7 @@ function BrandCard({ title, description, image }) {
         className="brand__button"
         target="_blank"
         rel="norefer"
-        to={"https://www.td-arcos.ru/catalog/"}
+        to="https://www.td-arcos.ru/catalog/"
       >
         Перейти в магазин
       </Link>

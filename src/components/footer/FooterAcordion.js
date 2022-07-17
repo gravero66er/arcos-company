@@ -1,15 +1,15 @@
 // Libraries
-import React, { useState } from "react"
-import styled from "styled-components"
+import React, { useState } from 'react'
+import styled from 'styled-components'
 
 // Components
-import StageArrow from "../svg/StageArrow"
+import StageArrow from '../svg/StageArrow'
 
 const Accordion = styled.div`
-  height: ${({ open }) => (open ? "100%" : "43px")};
+  height: ${({ open }) => (open ? '100%' : '43px')};
 
   .footer__arrow {
-    transform: ${({ open }) => (open ? "rotate(180deg)" : 0)};
+    transform: ${({ open }) => (open ? 'rotate(180deg)' : 0)};
   }
 
   .footer__content {
@@ -41,7 +41,7 @@ export default function FooterAccordion({ title, children }) {
           {title}
         </div>
         <div className="footer__arrow">
-          <StageArrow color={"#fff"} />
+          <StageArrow color="#fff" />
         </div>
       </div>
       <section className="footer__content">{children}</section>

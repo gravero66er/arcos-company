@@ -1,16 +1,16 @@
 // Libraries
-import { StaticImage } from "gatsby-plugin-image"
-import React, { useState } from "react"
-import styled from "styled-components"
+import { StaticImage } from 'gatsby-plugin-image'
+import React, { useState } from 'react'
+import styled from 'styled-components'
 
 // Components
-import StageArrow from "../../svg/StageArrow"
+import StageArrow from '../../svg/StageArrow'
 
 const Stage = styled.section`
-  height: ${({ open }) => (open ? null : "49px")};
+  height: ${({ open }) => (open ? null : '49px')};
 
   .stage__arrow {
-    transform: ${({ open }) => (open ? "rotate(180deg)" : "0")};
+    transform: ${({ open }) => (open ? 'rotate(180deg)' : '0')};
   }
 
   .stage__title {
@@ -38,7 +38,7 @@ export default function SecondHistoryStage({ color, years, title, info }) {
       <div className="stage__header title__wrapper title__wrapper--accordion">
         <div className="stage__dates article">{years}</div>
         <div className="stage__arrow">
-          <StageArrow color={"#1F1C2E"} />
+          <StageArrow color="#1F1C2E" />
         </div>
       </div>
       <section className="stage__content">
