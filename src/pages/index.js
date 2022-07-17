@@ -14,9 +14,6 @@ import { Seo } from "../components/Seo"
 export default function Home({ data }) {
   const slides = data.slides.nodes
   const posts = data.posts.nodes
-
-  console.log(document.location.href);
-
   return (
     <Layout>
       <Seo title={"Торгово-производственный холдинг ARCOS"} />

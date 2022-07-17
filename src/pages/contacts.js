@@ -11,8 +11,6 @@ import { Seo } from "../components/Seo"
 
 export default function Contacts({ data }) {
   const contacts = data.contacts.nodes
-  console.log(document.location.href);
-
   return (
     <Layout>
       <Seo 
