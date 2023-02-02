@@ -41,7 +41,7 @@ export default function Footer() {
           href="8 (982) 156 78 54"
           className="footer__phone title__h3 title__h3--white"
         >
-          8 (982) 156 78 54
+          8 (343) 301-80-88
         </a>
         <div className="footer__logo">
           <WhiteLogo />
